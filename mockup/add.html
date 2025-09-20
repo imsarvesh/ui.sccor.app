@@ -1,0 +1,217 @@
+<div
+  class="relative flex size-full min-h-screen flex-col bg-[#fcf8f8] justify-between group/design-root overflow-x-hidden"
+  style="
+    --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(156,73,73)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+    font-family: Lexend, 'Noto Sans', sans-serif;
+  "
+>
+  <div>
+    <div class="flex items-center bg-[#fcf8f8] p-4 pb-2 justify-between">
+      <div
+        class="text-[#1c0d0d] flex size-12 shrink-0 items-center"
+        data-icon="X"
+        data-size="24px"
+        data-weight="regular"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24px"
+          height="24px"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+          ></path>
+        </svg>
+      </div>
+      <h2
+        class="text-[#1c0d0d] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12"
+      >
+        Add Achievement
+      </h2>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <select
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1c0d0d] focus:outline-0 focus:ring-0 border-none bg-[#f4e7e7] focus:border-none h-14 bg-[image:--select-button-svg] placeholder:text-[#9c4949] p-4 text-base font-normal leading-normal"
+        >
+          <option value="one">Select Sport</option>
+          <option value="two">two</option>
+          <option value="three">three</option>
+        </select>
+      </label>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <input
+          placeholder="Achievement Details (e.g., Time, Distance, Score)"
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1c0d0d] focus:outline-0 focus:ring-0 border-none bg-[#f4e7e7] focus:border-none h-14 placeholder:text-[#9c4949] p-4 text-base font-normal leading-normal"
+          value=""
+        />
+      </label>
+    </div>
+    <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+      <label class="flex flex-col min-w-40 flex-1">
+        <textarea
+          placeholder="Description (Optional)"
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#1c0d0d] focus:outline-0 focus:ring-0 border-none bg-[#f4e7e7] focus:border-none min-h-36 placeholder:text-[#9c4949] p-4 text-base font-normal leading-normal"
+        ></textarea>
+      </label>
+    </div>
+    <h3
+      class="text-[#1c0d0d] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4"
+    >
+      Add Media
+    </h3>
+    <div class="flex flex-col p-4">
+      <div
+        class="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-[#e8cece] px-6 py-14"
+      >
+        <div class="flex max-w-[480px] flex-col items-center gap-2">
+          <p
+            class="text-[#1c0d0d] text-lg font-bold leading-tight tracking-[-0.015em] max-w-[480px] text-center"
+          >
+            Add Photos or Videos
+          </p>
+          <p
+            class="text-[#1c0d0d] text-sm font-normal leading-normal max-w-[480px] text-center"
+          >
+            Share your achievement visually
+          </p>
+        </div>
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4e7e7] text-[#1c0d0d] text-sm font-bold leading-normal tracking-[0.015em]"
+        >
+          <span class="truncate">Upload</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="flex px-4 py-3">
+      <button
+        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 flex-1 bg-[#f20d0d] text-[#fcf8f8] text-base font-bold leading-normal tracking-[0.015em]"
+      >
+        <span class="truncate">Share Achievement</span>
+      </button>
+    </div>
+    <div
+      class="flex gap-2 border-t border-[#f4e7e7] bg-[#fcf8f8] px-4 pb-3 pt-2"
+    >
+      <a
+        class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#9c4949]"
+        href="#"
+      >
+        <div
+          class="text-[#9c4949] flex h-8 items-center justify-center"
+          data-icon="House"
+          data-size="24px"
+          data-weight="regular"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24px"
+            height="24px"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"
+            ></path>
+          </svg>
+        </div>
+        <p
+          class="text-[#9c4949] text-xs font-medium leading-normal tracking-[0.015em]"
+        >
+          Home
+        </p>
+      </a>
+      <a
+        class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#9c4949]"
+        href="#"
+      >
+        <div
+          class="text-[#9c4949] flex h-8 items-center justify-center"
+          data-icon="Barbell"
+          data-size="24px"
+          data-weight="regular"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24px"
+            height="24px"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M248,120h-8V88a16,16,0,0,0-16-16H208V64a16,16,0,0,0-16-16H168a16,16,0,0,0-16,16v56H104V64A16,16,0,0,0,88,48H64A16,16,0,0,0,48,64v8H32A16,16,0,0,0,16,88v32H8a8,8,0,0,0,0,16h8v32a16,16,0,0,0,16,16H48v8a16,16,0,0,0,16,16H88a16,16,0,0,0,16-16V136h48v56a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16v-8h16a16,16,0,0,0,16-16V136h8a8,8,0,0,0,0-16ZM32,168V88H48v80Zm56,24H64V64H88V192Zm104,0H168V64h24V175.82c0,.06,0,.12,0,.18s0,.12,0,.18V192Zm32-24H208V88h16Z"
+            ></path>
+          </svg>
+        </div>
+        <p
+          class="text-[#9c4949] text-xs font-medium leading-normal tracking-[0.015em]"
+        >
+          Instructors
+        </p>
+      </a>
+      <a
+        class="just flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-[#1c0d0d]"
+        href="#"
+      >
+        <div
+          class="text-[#1c0d0d] flex h-8 items-center justify-center"
+          data-icon="Plus"
+          data-size="24px"
+          data-weight="fill"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24px"
+            height="24px"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM184,136H136v48a8,8,0,0,1-16,0V136H72a8,8,0,0,1,0-16h48V72a8,8,0,0,1,16,0v48h48a8,8,0,0,1,0,16Z"
+            ></path>
+          </svg>
+        </div>
+        <p
+          class="text-[#1c0d0d] text-xs font-medium leading-normal tracking-[0.015em]"
+        >
+          Add
+        </p>
+      </a>
+      <a
+        class="just flex flex-1 flex-col items-center justify-end gap-1 text-[#9c4949]"
+        href="#"
+      >
+        <div
+          class="text-[#9c4949] flex h-8 items-center justify-center"
+          data-icon="User"
+          data-size="24px"
+          data-weight="regular"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24px"
+            height="24px"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+            ></path>
+          </svg>
+        </div>
+        <p
+          class="text-[#9c4949] text-xs font-medium leading-normal tracking-[0.015em]"
+        >
+          Profile
+        </p>
+      </a>
+    </div>
+    <div class="h-5 bg-[#fcf8f8]"></div>
+  </div>
+</div>

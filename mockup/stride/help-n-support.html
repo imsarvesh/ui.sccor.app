@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden"
+      style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+    >
+      <div class="flex-grow">
+        <header class="flex items-center p-4">
+          <button class="text-gray-800 p-2 -ml-2">
+            <span class="material-symbols-outlined text-3xl"
+              >arrow_back_ios_new</span
+            >
+          </button>
+          <h1 class="text-xl font-bold text-gray-900 flex-1 text-center pr-8">
+            Help &amp; Support
+          </h1>
+        </header>
+        <main class="p-4 space-y-8">
+          <section class="px-4 -mt-4">
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                >search</span
+              >
+              <input
+                class="w-full rounded-full border border-gray-300 bg-white py-3 pl-10 pr-4 text-gray-700 placeholder-gray-500 focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]"
+                placeholder="Search for help..."
+                type="text"
+              />
+            </div>
+          </section>
+          <section>
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <div class="bg-white rounded-lg shadow-sm">
+              <a
+                class="flex items-center justify-between p-4 border-b border-gray-100"
+                href="#"
+              >
+                <span class="text-gray-700">Account Management</span>
+                <span class="material-symbols-outlined text-gray-400"
+                  >chevron_right</span
+                >
+              </a>
+              <a
+                class="flex items-center justify-between p-4 border-b border-gray-100"
+                href="#"
+              >
+                <span class="text-gray-700">Privacy Settings</span>
+                <span class="material-symbols-outlined text-gray-400"
+                  >chevron_right</span
+                >
+              </a>
+              <a
+                class="flex items-center justify-between p-4 border-b border-gray-100"
+                href="#"
+              >
+                <span class="text-gray-700">Activity Tracking</span>
+                <span class="material-symbols-outlined text-gray-400"
+                  >chevron_right</span
+                >
+              </a>
+              <a
+                class="flex items-center justify-between p-4 border-b border-gray-100"
+                href="#"
+              >
+                <span class="text-gray-700">Community Features</span>
+                <span class="material-symbols-outlined text-gray-400"
+                  >chevron_right</span
+                >
+              </a>
+              <a class="flex items-center justify-between p-4" href="#">
+                <span class="text-gray-700">Troubleshooting</span>
+                <span class="material-symbols-outlined text-gray-400"
+                  >chevron_right</span
+                >
+              </a>
+            </div>
+          </section>
+          <section>
+            <h2 class="text-lg font-semibold text-gray-800 mb-4">
+              Contact Support
+            </h2>
+            <div class="bg-white rounded-lg shadow-sm">
+              <a
+                class="flex items-center gap-4 p-4 border-b border-gray-100"
+                href="#"
+              >
+                <span
+                  class="material-symbols-outlined text-[var(--primary-color)]"
+                  >email</span
+                >
+                <span class="text-gray-700">Email Support</span>
+                <span class="material-symbols-outlined text-gray-400 ml-auto"
+                  >chevron_right</span
+                >
+              </a>
+              <a class="flex items-center gap-4 p-4" href="#">
+                <span
+                  class="material-symbols-outlined text-[var(--primary-color)]"
+                  >chat_bubble</span
+                >
+                <span class="text-gray-700">In-App Chat</span>
+                <span class="material-symbols-outlined text-gray-400 ml-auto"
+                  >chevron_right</span
+                >
+              </a>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer class="sticky bottom-0 bg-white border-t border-gray-200">
+        <nav class="flex justify-around py-2">
+          <a
+            class="flex flex-col items-center justify-center gap-1 text-gray-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">timeline</span>
+            <span class="text-xs font-medium">Activity</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center gap-1 text-gray-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">add_box</span>
+            <span class="text-xs font-medium">Record</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center gap-1 text-gray-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">groups</span>
+            <span class="text-xs font-medium">Clubs</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center gap-1 text-[var(--primary-color)]"
+            href="#"
+          >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: 'FILL' 1"
+              >person</span
+            >
+            <span class="text-xs font-medium">Profile</span>
+          </a>
+        </nav>
+        <div class="h-5 bg-white"></div>
+      </footer>
+    </div>
+  </body>
+</html>

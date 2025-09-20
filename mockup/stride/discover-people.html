@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50"
+    style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="flex-grow">
+        <header class="sticky top-0 z-10 bg-slate-50/80 backdrop-blur-md">
+          <div class="flex items-center p-4 pb-2">
+            <button
+              class="text-[#0d171b] flex size-10 shrink-0 items-center justify-center rounded-full"
+            >
+              <span class="material-symbols-outlined text-2xl">
+                arrow_back
+              </span>
+            </button>
+            <h2
+              class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10"
+            >
+              Discover People
+            </h2>
+          </div>
+          <div class="px-4 py-3">
+            <div class="relative">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+              >
+                <span class="material-symbols-outlined text-slate-500">
+                  search
+                </span>
+              </div>
+              <input
+                class="block w-full rounded-full border-0 bg-slate-200 py-3 pl-10 pr-4 text-slate-900 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6"
+                placeholder="Search by name or username"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="px-4 pb-3">
+            <div class="grid grid-cols-3 gap-2 rounded-full bg-slate-200 p-1">
+              <button
+                class="flex items-center justify-center gap-1 rounded-full bg-[var(--primary-color)] py-2 px-3 text-center text-sm font-bold text-white shadow-sm transition-colors"
+              >
+                <span>All</span>
+              </button>
+              <button
+                class="flex items-center justify-center gap-1 rounded-full py-2 px-3 text-center text-sm font-medium text-slate-600 transition-colors hover:bg-slate-300"
+              >
+                <span class="material-symbols-outlined text-lg"
+                  >directions_run</span
+                >
+                <span>Running</span>
+              </button>
+              <button
+                class="flex items-center justify-center gap-1 rounded-full py-2 px-3 text-center text-sm font-medium text-slate-600 transition-colors hover:bg-slate-300"
+              >
+                <span class="material-symbols-outlined text-lg"
+                  >directions_bike</span
+                >
+                <span>Cycling</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="px-4">
+          <h3
+            class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4"
+          >
+            Recommended for you
+          </h3>
+          <div class="space-y-2">
+            <div
+              class="flex items-center gap-4 rounded-xl bg-white p-3 shadow-sm"
+            >
+              <img
+                alt="Ethan Carter's profile picture"
+                class="h-14 w-14 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYLI032BTNdHP9S8RtXA4dUCfcOehcrI8q5_CuhnomixVlisdL7orZ75oUU6VDMx7OZ_xzgeCQiY4q8YcmAi6I1SlcvsDK2DVbH3iDWZvVRFmbV128X7WdXRXRO1tuB6UQ6XVJ4hPHEuuXe69Q6tQOAH4GljeOOYyyhVlj4jcQylK2KkKMCeInTvxSThIhIrG2bhI33jr_YnjuOhDh6iXVrZ0qBWry8rfwe34N06cKZwFfQO4x24YG9BfwAu1iMRvD4xnfsYZfTNGP"
+              />
+              <div class="flex-grow">
+                <p class="text-[#0d171b] text-base font-bold leading-normal">
+                  Ethan Carter
+                </p>
+                <p class="text-slate-500 text-sm font-normal leading-normal">
+                  12 mutual connections
+                </p>
+              </div>
+              <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-[var(--primary-color)] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-sky-500"
+              >
+                <span class="truncate">Follow</span>
+              </button>
+            </div>
+            <div
+              class="flex items-center gap-4 rounded-xl bg-white p-3 shadow-sm"
+            >
+              <img
+                alt="Olivia Bennett's profile picture"
+                class="h-14 w-14 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Sgc9ag7Yc-8aUD95FsGQyW8IWTvd_rHzASLUh-JkF5zWomxYK5iXtgIgCbl4_Iy-r042TydT5OYdgVp7BxXI41HyrN114PevIlmV-RhREdhfv_Nz4CWtjRuCWND1b3X_JDaFK96l9TJ6sBHx9qfzGeXDZ80-TKLcGCW2e5CGREz8cORsY8qeAA4gH26WBtaMkTXjG1O0VjJMfeUSCx9NHa395ggsY1U-O2EF04kPqXBryI0sD5ZAr0qv9ugPUEajQUPD-CXd4NB0"
+              />
+              <div class="flex-grow">
+                <p class="text-[#0d171b] text-base font-bold leading-normal">
+                  Olivia Bennett
+                </p>
+                <p class="text-slate-500 text-sm font-normal leading-normal">
+                  15 mutual connections
+                </p>
+              </div>
+              <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-slate-200 text-slate-800 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-slate-300"
+              >
+                <span class="truncate">Following</span>
+              </button>
+            </div>
+            <div
+              class="flex items-center gap-4 rounded-xl bg-white p-3 shadow-sm"
+            >
+              <img
+                alt="Noah Thompson's profile picture"
+                class="h-14 w-14 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC3BvkZ7BhK878JBkLKjRAk0bBk1eBylgFlNlLs4fFcluKCFSXIHtoibIEeS-a74cvi0MpvkGAsM6d4MHvOdsLxA6tFLyupDzOlWQcBqTec6efdGPxyXZ6LY55xQ7u_tst10RfZzJIN5-M8fbVMrWH-Npu_lxwthy1ms7Q1KVUBJb_Xju9WQEk4nBj-Ac_tPK2WUdEO8hvZD6rOrGBblziYBOMglg7wTZ289FnlPdjc07r4TxSGW67Nk757J-JXoycnsVsXgStbrz4"
+              />
+              <div class="flex-grow">
+                <p class="text-[#0d171b] text-base font-bold leading-normal">
+                  Noah Thompson
+                </p>
+                <p class="text-slate-500 text-sm font-normal leading-normal">
+                  10 mutual connections
+                </p>
+              </div>
+              <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-[var(--primary-color)] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-sky-500"
+              >
+                <span class="truncate">Follow</span>
+              </button>
+            </div>
+            <div
+              class="flex items-center gap-4 rounded-xl bg-white p-3 shadow-sm"
+            >
+              <img
+                alt="Ava Harper's profile picture"
+                class="h-14 w-14 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN3twxy0-6ZfO-GWW1Q94PybBgpbzVSgl_VNIj8MK_ZhgPSe5xdmmso5OYmhPwpg9SJUg-5Q8Y2MGmi3qb8YILjf79QIdRUUX28TFEcCFMTAc9THFfvL6wA5ZXIEAqREgIFOwN8fkc4xGaIAPtRKdm1NFuSDLtIpE9as-yXjM_5zrPJTVX2485pBKCRB4aaUbpLLg3syz_iUPBOUriH_sY9935Odfk9X9nSBa5DEurBbrFZCxAk5v-n4dsT_-pe28C67A9wlkjNVgr"
+              />
+              <div class="flex-grow">
+                <p class="text-[#0d171b] text-base font-bold leading-normal">
+                  Ava Harper
+                </p>
+                <p class="text-slate-500 text-sm font-normal leading-normal">
+                  8 mutual connections
+                </p>
+              </div>
+              <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-[var(--primary-color)] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-sky-500"
+              >
+                <span class="truncate">Follow</span>
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer
+        class="sticky bottom-0 bg-slate-50/80 backdrop-blur-md border-t border-slate-200"
+      >
+        <nav class="flex justify-around py-2">
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-[#0d171b]"
+            href="#"
+          >
+            <span class="material-symbols-outlined fill-current text-2xl">
+              timeline
+            </span>
+            <p class="text-xs font-medium tracking-[0.015em]">Activity</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-2xl"> add_box </span>
+            <p class="text-xs font-medium tracking-[0.015em]">Record</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-2xl"> groups </span>
+            <p class="text-xs font-medium tracking-[0.015em]">Clubs</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-2xl"> person </span>
+            <p class="text-xs font-medium tracking-[0.015em]">Profile</p>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

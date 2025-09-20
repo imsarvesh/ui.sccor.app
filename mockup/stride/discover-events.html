@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50"
+    style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="flex-grow">
+        <header class="sticky top-0 z-10 bg-slate-50/80 backdrop-blur-md">
+          <div class="flex items-center p-4 pb-2">
+            <button
+              class="text-[#0d171b] flex size-10 shrink-0 items-center justify-center rounded-full"
+            >
+              <span class="material-symbols-outlined text-2xl">
+                arrow_back
+              </span>
+            </button>
+            <h2
+              class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10"
+            >
+              Discover Events
+            </h2>
+          </div>
+          <div class="px-4 py-3 space-y-3">
+            <div class="grid grid-cols-3 gap-2">
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                >
+                  <span
+                    class="material-symbols-outlined text-slate-500 text-lg"
+                  >
+                    sports_score
+                  </span>
+                </div>
+                <select
+                  class="block w-full rounded-full border-0 bg-slate-200 py-2.5 pl-10 pr-4 text-slate-900 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6 appearance-none"
+                >
+                  <option selected="">All Sports</option>
+                  <option>Running</option>
+                  <option>Cycling</option>
+                </select>
+              </div>
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                >
+                  <span
+                    class="material-symbols-outlined text-slate-500 text-lg"
+                  >
+                    location_on
+                  </span>
+                </div>
+                <input
+                  class="block w-full rounded-full border-0 bg-slate-200 py-2.5 pl-10 pr-4 text-slate-900 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6"
+                  placeholder="Location"
+                  type="text"
+                />
+              </div>
+              <div class="relative">
+                <div
+                  class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+                >
+                  <span
+                    class="material-symbols-outlined text-slate-500 text-lg"
+                  >
+                    calendar_today
+                  </span>
+                </div>
+                <input
+                  class="block w-full rounded-full border-0 bg-slate-200 py-2.5 pl-10 pr-4 text-slate-900 placeholder:text-slate-500 focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)] sm:text-sm sm:leading-6"
+                  onblur="(this.type='text')"
+                  onfocus="(this.type='date')"
+                  placeholder="Date"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="px-4 pb-4">
+          <div class="flex justify-between items-center py-4">
+            <h3
+              class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em]"
+            >
+              Upcoming Events
+            </h3>
+            <div class="flex items-center gap-1">
+              <button
+                class="text-slate-600 p-1.5 rounded-full hover:bg-slate-200"
+              >
+                <span class="material-symbols-outlined text-2xl"
+                  >calendar_view_month</span
+                >
+              </button>
+              <button
+                class="text-[var(--primary-color)] p-1.5 rounded-full bg-sky-100"
+              >
+                <span class="material-symbols-outlined text-2xl"
+                  >view_list</span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="rounded-xl bg-white p-4 shadow-sm">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 text-center">
+                  <p
+                    class="text-xs font-bold text-[var(--primary-color)] uppercase"
+                  >
+                    APR
+                  </p>
+                  <p class="text-2xl font-bold text-[#0d171b]">25</p>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-sm font-semibold text-slate-500">
+                    Cycling • 8:00 AM
+                  </p>
+                  <p
+                    class="text-base font-bold text-[#0d171b] leading-tight mt-1"
+                  >
+                    Sunrise City Bike Tour
+                  </p>
+                  <div class="flex items-center gap-2 mt-2">
+                    <div class="flex -space-x-2">
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                    </div>
+                    <p class="text-sm text-slate-500">12 attendees</p>
+                  </div>
+                </div>
+                <button
+                  class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-[var(--primary-color)] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-sky-500"
+                >
+                  <span class="truncate">Join Event</span>
+                </button>
+              </div>
+            </div>
+            <div class="rounded-xl bg-white p-4 shadow-sm">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 text-center">
+                  <p
+                    class="text-xs font-bold text-[var(--primary-color)] uppercase"
+                  >
+                    APR
+                  </p>
+                  <p class="text-2xl font-bold text-[#0d171b]">28</p>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-sm font-semibold text-slate-500">
+                    Running • 6:30 PM
+                  </p>
+                  <p
+                    class="text-base font-bold text-[#0d171b] leading-tight mt-1"
+                  >
+                    Sunset 5K Park Run
+                  </p>
+                  <div class="flex items-center gap-2 mt-2">
+                    <div class="flex -space-x-2">
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                    </div>
+                    <p class="text-sm text-slate-500">25 attendees</p>
+                  </div>
+                </div>
+                <button
+                  class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-slate-200 text-slate-800 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-slate-300"
+                >
+                  <span class="truncate">Joined</span>
+                </button>
+              </div>
+            </div>
+            <div class="rounded-xl bg-white p-4 shadow-sm">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 text-center">
+                  <p
+                    class="text-xs font-bold text-[var(--primary-color)] uppercase"
+                  >
+                    MAY
+                  </p>
+                  <p class="text-2xl font-bold text-[#0d171b]">02</p>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-sm font-semibold text-slate-500">
+                    Cycling • 9:00 AM
+                  </p>
+                  <p
+                    class="text-base font-bold text-[#0d171b] leading-tight mt-1"
+                  >
+                    Mountain Challenge Ride
+                  </p>
+                  <div class="flex items-center gap-2 mt-2">
+                    <div class="flex -space-x-2">
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                    </div>
+                    <p class="text-sm text-slate-500">8 attendees</p>
+                  </div>
+                </div>
+                <button
+                  class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-[var(--primary-color)] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-sky-500"
+                >
+                  <span class="truncate">Join Event</span>
+                </button>
+              </div>
+            </div>
+            <div class="rounded-xl bg-white p-4 shadow-sm">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 text-center">
+                  <p
+                    class="text-xs font-bold text-[var(--primary-color)] uppercase"
+                  >
+                    MAY
+                  </p>
+                  <p class="text-2xl font-bold text-[#0d171b]">05</p>
+                </div>
+                <div class="flex-grow">
+                  <p class="text-sm font-semibold text-slate-500">
+                    Running • 7:00 AM
+                  </p>
+                  <p
+                    class="text-base font-bold text-[#0d171b] leading-tight mt-1"
+                  >
+                    Coastal Trail Run
+                  </p>
+                  <div class="flex items-center gap-2 mt-2">
+                    <div class="flex -space-x-2">
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                      <img
+                        alt=""
+                        class="inline-block h-6 w-6 rounded-full ring-2 ring-white"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6hmBmuk45sOCFVe0DQG3q3rKrd1EWYS9V6xTviVBit_ai8sKZ3mjd9nmyub92fvwXE5ohw3w59mZvN_suaZY902GCi_OMGbyu44iqpiGEx45DeRHmr0IqlyEJDQMjN-LELVJ3Ta678eKXzu4SCqbXq5s-PAxFhpoQgMV09pIMnKKRwmKeqKhJbstVeZgDzPqA_LG98jlxKG6lxm7nRFIi5x2enyoOFmNVBy3iGQnk-TFMsCSP99mUAu25J7vo-HAohSiWcI-8A0G"
+                      />
+                    </div>
+                    <p class="text-sm text-slate-500">18 attendees</p>
+                  </div>
+                </div>
+                <button
+                  class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-[var(--primary-color)] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-sky-500"
+                >
+                  <span class="truncate">Join Event</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer
+        class="sticky bottom-0 bg-slate-50/80 backdrop-blur-md border-t border-slate-200"
+      >
+        <nav class="flex justify-around py-2">
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-2xl"> timeline </span>
+            <p class="text-xs font-medium tracking-[0.015em]">Activity</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-2xl"> add_box </span>
+            <p class="text-xs font-medium tracking-[0.015em]">Record</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-[var(--primary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined fill-current text-2xl">
+              event
+            </span>
+            <p class="text-xs font-bold tracking-[0.015em]">Events</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-2xl"> groups </span>
+            <p class="text-xs font-medium tracking-[0.015em]">Clubs</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-2xl"> person </span>
+            <p class="text-xs font-medium tracking-[0.015em]">Profile</p>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

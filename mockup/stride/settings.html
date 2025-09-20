@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-50: #eff6ff;
+        --primary-100: #dbeafe;
+        --primary-200: #bfdbfe;
+        --primary-300: #93c5fd;
+        --primary-400: #60a5fa;
+        --primary-500: #3b82f6;
+        --primary-600: #2563eb;
+        --primary-700: #1d4ed8;
+        --primary-800: #1e40af;
+        --primary-900: #1e3a8a;
+        --primary-950: #172554;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden"
+    >
+      <div class="flex flex-col">
+        <header
+          class="sticky top-0 z-10 flex items-center justify-between bg-gray-50/80 p-4 backdrop-blur-sm"
+        >
+          <button
+            class="flex size-10 items-center justify-center rounded-full text-gray-700"
+          >
+            <span class="material-symbols-outlined text-2xl"
+              >arrow_back_ios_new</span
+            >
+          </button>
+          <h1 class="text-lg font-bold text-gray-900">Settings</h1>
+          <div class="size-10"></div>
+        </header>
+        <main class="flex-1 px-6 py-4">
+          <section class="space-y-4">
+            <h2
+              class="text-sm font-semibold uppercase text-gray-500 tracking-wider"
+            >
+              Units
+            </h2>
+            <div class="divide-y divide-gray-200 rounded-lg bg-white shadow-sm">
+              <a
+                class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-150"
+                href="#"
+              >
+                <span class="text-base font-medium text-gray-800"
+                  >Distance</span
+                >
+                <div class="flex items-center gap-2">
+                  <span class="text-sm text-gray-500">Miles</span>
+                  <span class="material-symbols-outlined text-gray-400"
+                    >chevron_right</span
+                  >
+                </div>
+              </a>
+              <a
+                class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-150"
+                href="#"
+              >
+                <span class="text-base font-medium text-gray-800"
+                  >Elevation</span
+                >
+                <div class="flex items-center gap-2">
+                  <span class="text-sm text-gray-500">Feet</span>
+                  <span class="material-symbols-outlined text-gray-400"
+                    >chevron_right</span
+                  >
+                </div>
+              </a>
+              <a
+                class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-150"
+                href="#"
+              >
+                <span class="text-base font-medium text-gray-800">Weight</span>
+                <div class="flex items-center gap-2">
+                  <span class="text-sm text-gray-500">Pounds</span>
+                  <span class="material-symbols-outlined text-gray-400"
+                    >chevron_right</span
+                  >
+                </div>
+              </a>
+            </div>
+          </section>
+          <section class="mt-8 space-y-4">
+            <h2
+              class="text-sm font-semibold uppercase text-gray-500 tracking-wider"
+            >
+              Preferences
+            </h2>
+            <div class="divide-y divide-gray-200 rounded-lg bg-white shadow-sm">
+              <a
+                class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-150"
+                href="#"
+              >
+                <span class="text-base font-medium text-gray-800"
+                  >Language</span
+                >
+                <div class="flex items-center gap-2">
+                  <span class="text-sm text-gray-500">English</span>
+                  <span class="material-symbols-outlined text-gray-400"
+                    >chevron_right</span
+                  >
+                </div>
+              </a>
+              <a
+                class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-150"
+                href="#"
+              >
+                <span class="text-base font-medium text-gray-800"
+                  >Profile Privacy</span
+                >
+                <div class="flex items-center gap-2">
+                  <span class="text-sm text-gray-500">Public</span>
+                  <span class="material-symbols-outlined text-gray-400"
+                    >chevron_right</span
+                  >
+                </div>
+              </a>
+              <div class="flex items-center justify-between p-4">
+                <span class="text-base font-medium text-gray-800"
+                  >Notifications</span
+                >
+                <label class="relative inline-flex cursor-pointer items-center">
+                  <input
+                    checked=""
+                    class="peer sr-only"
+                    type="checkbox"
+                    value=""
+                  />
+                  <div
+                    class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300"
+                  ></div>
+                </label>
+              </div>
+              <div class="flex items-center justify-between p-4">
+                <span class="text-base font-medium text-gray-800"
+                  >Auto-Pause</span
+                >
+                <label class="relative inline-flex cursor-pointer items-center">
+                  <input class="peer sr-only" type="checkbox" value="" />
+                  <div
+                    class="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-primary-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300"
+                  ></div>
+                </label>
+              </div>
+            </div>
+          </section>
+          <section class="mt-8 space-y-4">
+            <h2
+              class="text-sm font-semibold uppercase text-gray-500 tracking-wider"
+            >
+              Support
+            </h2>
+            <div class="rounded-lg bg-white shadow-sm">
+              <a
+                class="flex items-center justify-between p-4 hover:bg-gray-50 transition-colors duration-150"
+                href="#"
+              >
+                <div class="flex items-center gap-4">
+                  <span class="material-symbols-outlined text-gray-700"
+                    >feedback</span
+                  >
+                  <span class="text-base font-medium text-gray-800"
+                    >Feedback &amp; Bug Reports</span
+                  >
+                </div>
+                <span class="material-symbols-outlined text-gray-400"
+                  >chevron_right</span
+                >
+              </a>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer
+        class="sticky bottom-0 z-10 border-t border-gray-200 bg-white/90 backdrop-blur-sm"
+      >
+        <nav class="flex justify-around p-2">
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-gray-500 hover:text-primary-600 transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">timeline</span>
+            <span class="text-xs font-medium">Activity</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-gray-500 hover:text-primary-600 transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">add_box</span>
+            <span class="text-xs font-medium">Record</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-gray-500 hover:text-primary-600 transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">groups</span>
+            <span class="text-xs font-medium">Clubs</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 rounded-lg bg-primary-50 p-2 text-primary-600 transition-colors"
+            href="#"
+          >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: 'FILL' 1"
+              >person</span
+            >
+            <span class="text-xs font-bold">Profile</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

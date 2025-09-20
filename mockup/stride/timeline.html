@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden"
+      style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+    >
+      <div class="flex-grow">
+        <header
+          class="sticky top-0 z-10 flex items-center justify-between bg-white/80 p-4 pb-2 backdrop-blur-sm"
+        >
+          <h1 class="flex-1 text-center text-lg font-bold text-[#0d171b]">
+            Activity Feed
+          </h1>
+          <button
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-[#0d171b]"
+          >
+            <span class="material-symbols-outlined"> add </span>
+          </button>
+        </header>
+        <main class="divide-y divide-gray-200">
+          <div class="bg-white">
+            <div class="flex items-center gap-4 px-4 py-3">
+              <img
+                alt="User avatar"
+                class="h-12 w-12 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQK0d8GRapPv6QB0dvobjSce1eYm5xPc0UPnBTvSI0WLoJr-clAliNOwGZR35mkvpRspe1MccBQq9vqSO5pvTXGIUoBfzE3MP8HGdA0qsVubC-tyuim9npmFRDWyZUpoxZT6_DVIXjYJR4dKckHU8mrF1kjEpvkvi9DSvVtzC23fkIY7XRsrywBlBpaSsWGvySw-ZNakhlcBAQz-9QogFPVFq0BZiJJ5nVLKt7FvtVv7j7andw2kQ_kAnftVwg4LSWJyHWEMEyCxu9"
+              />
+              <div>
+                <p class="font-semibold text-[#0d171b]">Alex Doe</p>
+                <p class="text-sm text-gray-500">Morning Run</p>
+              </div>
+              <div class="ml-auto text-right">
+                <p class="font-medium text-[#0d171b]">10 mi</p>
+                <p class="text-sm text-gray-500">1000 ft</p>
+              </div>
+            </div>
+            <div class="aspect-w-3 aspect-h-2">
+              <img
+                alt="Activity map"
+                class="w-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFLVCPKGs-OVdH6sVMNbreHYva3XbIR4xzCOLhFa77BpmKJK5imvToAjQm6NpYySm06GO7aC4ssUfXT2WUaoJ5BmmFf5FZm0AthgEUPHcoXeyi8p4-lXHC1FkqxvoGzssbA_t80uxWcIzLMuPFSrKkfDf7ybjUVaebGadolgqMoMHeuzXb3dQEYOGwz-gq8sp5H4jceN8c5LwrmgSC7ArssiP6o75PSKkAeL8zc0nCvnzBo9aeRdVMe8zTWNcBbh3DDOIyehdfY9G6"
+              />
+            </div>
+            <div class="flex justify-around px-4 py-2">
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-red-500"
+              >
+                <span class="material-symbols-outlined"> favorite_border </span>
+                <span class="text-sm font-medium">12</span>
+              </button>
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100"
+              >
+                <span class="material-symbols-outlined">
+                  chat_bubble_outline
+                </span>
+                <span class="text-sm font-medium">3</span>
+              </button>
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100"
+              >
+                <span class="material-symbols-outlined"> share </span>
+                <span class="text-sm font-medium">1</span>
+              </button>
+            </div>
+          </div>
+          <div class="bg-white">
+            <div class="flex items-center gap-4 px-4 py-3">
+              <img
+                alt="User avatar"
+                class="h-12 w-12 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVqSbnqpE2Uhd_ruaAdeSjCEMGes6PoeUiDreS81uRrpluDEh3oB9z5KBAWHmopcOeZgiqJqPZzo27NRWE2Hy2YN3xPmJoh8_4WLYwwh6MPZsjsJK1tJ1mrHf7rEcPRX8YVS_XkGCaExIWLuW8LNd5DeMnEutDSGEjzRseXuQwvWOJcZ0oZ9Ixn0GRoSsyCaEpIR---KKkhGD8f505Jj847i4ouWJoZc5lIeBzIU1s1JzxPznu9fJPU89hwYnlELpIYjLul-KFhmmh"
+              />
+              <div>
+                <p class="font-semibold text-[#0d171b]">Jane Smith</p>
+                <p class="text-sm text-gray-500">Cycling Adventure</p>
+              </div>
+              <div class="ml-auto text-right">
+                <p class="font-medium text-[#0d171b]">25 mi</p>
+                <p class="text-sm text-gray-500">2000 ft</p>
+              </div>
+            </div>
+            <div class="aspect-w-3 aspect-h-2">
+              <img
+                alt="Activity map"
+                class="w-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQyz63U3PnlXW-gDfJu7lT5oabp1E12bsGCLxW09lTCeHt3sscs-9g_aSzzcXbaDCZ239LLIC8u3gqIV8liJq5VK-kdjrqR4SoIBEaK00Bk6MY93KLOKlSpzqrsSfOUOUYghKmDqTfhVDzGUli5JM1MqqAwuqRs8E94n2RDy3-vFD7goFplGy5a-8F53x-EmAjqKt2fjmNjpmv71kXRJh8f-CXPiI6aIGNAkb0RtXl7q1OKg3xARp-a-Mh4w3sv2oQ-IyYKz7kZmI9"
+              />
+            </div>
+            <div class="flex justify-around px-4 py-2">
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-red-500"
+              >
+                <span class="material-symbols-outlined"> favorite_border </span>
+                <span class="text-sm font-medium">25</span>
+              </button>
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100"
+              >
+                <span class="material-symbols-outlined">
+                  chat_bubble_outline
+                </span>
+                <span class="text-sm font-medium">8</span>
+              </button>
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100"
+              >
+                <span class="material-symbols-outlined"> share </span>
+                <span class="text-sm font-medium">2</span>
+              </button>
+            </div>
+          </div>
+          <div class="bg-white">
+            <div class="flex items-center gap-4 px-4 py-3">
+              <img
+                alt="User avatar"
+                class="h-12 w-12 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVjk9jE5_nWDQwR-SQc2spL8QD_E-jgVJqpdYrmBc-Fq__6XgI15UjfLV-T5TQEEv2h6Qa5beiuK8D0IMchD2C3r5LkN65GOJ24Ibk7sou0aBMDj3XTSpb2HIIgs4EZF3JRSKIE1znjF5OgGci1VfnZ-i_xMccbBZEvF9KxCfp5Nq2YmsXHiZMrgz82m7O9OqA2WLAnS4wPfOJyKkZgl5ou7TTx8Rtqfb2KUDonk0L9eTj3T2qECTn_-Vw9Rn3BKAnP7Khnk8OaGP5"
+              />
+              <div>
+                <p class="font-semibold text-[#0d171b]">Sam Wilson</p>
+                <p class="text-sm text-gray-500">Evening Jog</p>
+              </div>
+              <div class="ml-auto text-right">
+                <p class="font-medium text-[#0d171b]">5 mi</p>
+                <p class="text-sm text-gray-500">500 ft</p>
+              </div>
+            </div>
+            <div class="aspect-w-3 aspect-h-2">
+              <img
+                alt="Activity map"
+                class="w-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkemBGBdx5zA72WJGzD8_7lzYnCVX8OrNa7wFavwNpX_MzgCcerh3TwXmUw7zMsdxpj7NoQNNr4ZY1IkgyroJc760ls6LhsJgk34oKRpt35Nwj5YOfMKyh4F5G2li6gDCVOfvTsUJ-jC5FaTK0Pz3BPWUa_fADhXtPJ9Y0G-X-2O1xjk_mTByj5uCCUsqz3mDpBxJRPcTJioty61GIbnYYh8PBU_XE2qqDfobvOz3DBWyB_qSKqBt2KVKAPivkr-fdeauKCMgs_GrZ"
+              />
+            </div>
+            <div class="flex justify-around px-4 py-2">
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100 hover:text-red-500"
+              >
+                <span class="material-symbols-outlined"> favorite_border </span>
+                <span class="text-sm font-medium">18</span>
+              </button>
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100"
+              >
+                <span class="material-symbols-outlined">
+                  chat_bubble_outline
+                </span>
+                <span class="text-sm font-medium">5</span>
+              </button>
+              <button
+                class="flex items-center gap-2 rounded-full px-3 py-2 text-gray-600 hover:bg-gray-100"
+              >
+                <span class="material-symbols-outlined"> share </span>
+                <span class="text-sm font-medium">1</span>
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer
+        class="sticky bottom-0 z-10 border-t border-gray-200 bg-white/80 pb-3 pt-2 backdrop-blur-sm"
+      >
+        <nav class="flex justify-around">
+          <a
+            class="flex flex-col items-center gap-1 text-[var(--primary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> timeline </span>
+            <p class="text-xs font-medium">Activity</p>
+          </a>
+          <a class="flex flex-col items-center gap-1 text-gray-500" href="#">
+            <span class="material-symbols-outlined"> track_changes </span>
+            <p class="text-xs font-medium">Record</p>
+          </a>
+          <a class="flex flex-col items-center gap-1 text-gray-500" href="#">
+            <span class="material-symbols-outlined"> groups </span>
+            <p class="text-xs font-medium">Clubs</p>
+          </a>
+          <a class="flex flex-col items-center gap-1 text-gray-500" href="#">
+            <span class="material-symbols-outlined"> person </span>
+            <p class="text-xs font-medium">Profile</p>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

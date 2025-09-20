@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root"
+      style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+    >
+      <div class="flex flex-col">
+        <header class="flex items-center justify-between p-4 pb-3">
+          <button
+            class="flex size-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-800"
+          >
+            <span class="material-symbols-outlined text-2xl">arrow_back</span>
+          </button>
+          <h1 class="flex-1 text-center text-xl font-bold text-slate-800">
+            Connected Apps
+          </h1>
+          <div class="size-10"></div>
+        </header>
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-slate-800">Available Apps</h2>
+          <p class="mt-1 text-slate-500">
+            Connect your favorite apps to automatically sync your activities and
+            data.
+          </p>
+          <div class="mt-6 space-y-4">
+            <div
+              class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-orange-500"
+                >
+                  <img
+                    alt="Strava logo"
+                    class="h-6 w-6"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvDhIKPGMvlRS0FyxIYEV84nTmkX0JRkUJZzy6QzNzDIWMe98CU847zJDap4UCJLeWz73lSzatA5Onvfgemxp6jrAbD1jgruu_QHsE4don07M_dTS8T2vCvyqS9gvmpk8Zyex5N9cg7OSYVOKOTxjEg_dXEsta3vRIpvgm1QnyiSJpPnC2Qt8hGbyePDAohuP76dx7LQDZH7KZFiqKiXzkfGj30lnqFICdNFq-jbt7TAqRHbYtNj6ymaSJ5IHxII2uBGVYM5xQXhRz"
+                  />
+                </div>
+                <div class="flex-1">
+                  <p class="text-base font-semibold text-slate-800">Strava</p>
+                  <p class="text-sm text-slate-500">Connected</p>
+                </div>
+                <button
+                  class="h-10 rounded-lg bg-red-500 px-4 text-sm font-medium text-white"
+                >
+                  Disconnect
+                </button>
+              </div>
+              <div
+                class="flex items-center justify-between rounded-lg bg-slate-50 p-3"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-lg text-slate-500"
+                    >history</span
+                  >
+                  <p class="text-sm font-medium text-slate-600">
+                    Import historical data
+                  </p>
+                </div>
+                <button
+                  class="h-8 rounded-md bg-slate-200 px-3 text-sm font-semibold text-slate-700"
+                >
+                  Import
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-3"
+            >
+              <div
+                class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-slate-900"
+              >
+                <img
+                  alt="Garmin logo"
+                  class="h-6 w-6"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZy7Xak3pa12t4c8IgiVETBEi605Myju2YMGm_CFvN9J9TQQ-NJlXrBZct9S-DwYkp6GtxlQ5qrRrvb0snT9T9DVERLZ_INp3axp6X6GTmJD9Ual0qFUC6ioD3wwl58myiu9yGrpTQrKVqK87077LyCiQhfPM31d0hfZo4zpQP6mQbNNoQplAzZJ4kt3DtmYovObEQ8447Wxh-B_Sc0jWFk2M8L--J2Ia11dKUpcEpu-a98e1TMf_Vdbq2f1zZ_5wCM8vPL1w0uDUh"
+                />
+              </div>
+              <div class="flex-1">
+                <p class="text-base font-semibold text-slate-800">Garmin</p>
+                <p class="text-sm text-slate-500">Sync your activities</p>
+              </div>
+              <button
+                class="h-10 rounded-lg bg-[var(--primary-color)] px-4 text-sm font-medium text-white"
+              >
+                Connect
+              </button>
+            </div>
+            <div
+              class="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-3"
+            >
+              <div
+                class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-teal-500"
+              >
+                <img
+                  alt="Fitbit logo"
+                  class="h-6 w-6"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPWs_tn96x3wLPIdLI0Nqxo8EvFFuRKuf6L6PGeI8jckeJB20WacoF94UOUTHeZYUBeJOBSMKfQsZfqxtkDP1jtSNHXRGs81yrMoZiLJ4-VoK_RcBnMRPeavrLcoILaAAQrRyZVJM_Ow4eyDiFYRQtkUeJUjBlMsfE2FQqReGS6xh0b0ec-eLrCaQ5JGWZ8xKzVKbGqspVTUPx6MWjSg3THbrrBW7jAiBGi3f1E1lIWJGzds2nUT6uVjTBtVyCnPdPIhQuYGxJ_R4j"
+                />
+              </div>
+              <div class="flex-1">
+                <p class="text-base font-semibold text-slate-800">Fitbit</p>
+                <p class="text-sm text-slate-500">Sync your activities</p>
+              </div>
+              <button
+                class="h-10 rounded-lg bg-[var(--primary-color)] px-4 text-sm font-medium text-white"
+              >
+                Connect
+              </button>
+            </div>
+            <div
+              class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-red-600"
+                >
+                  <img
+                    alt="Polar logo"
+                    class="h-6 w-6"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGEzZUMvwXFNMvDAbE0fJpuxDFCP_sDLg13Bh5bfvskMYU3XbRxxM16nskc4l6ydm3svCic98S9Wkb_YdwR8U6eBCj2ncuPwoyBLEjoFpujM_9JC_HZApHYWlBIfNKUe4gYl7WjkIRd39FRHJeUhKGPVye4GSp8U0dB75IIAJGnTvePtvEDxENEbRqBheCMYMyl9sPLO8dmLwg4yD6Af09Y_3puwfRjiDFFwkJVwL7aBwYelX7PLs5rM3uXYHbD-npoNuUoBl18470"
+                  />
+                </div>
+                <div class="flex-1">
+                  <p class="text-base font-semibold text-slate-800">Polar</p>
+                  <p class="text-sm text-slate-500">Connected</p>
+                </div>
+                <button
+                  class="h-10 rounded-lg bg-red-500 px-4 text-sm font-medium text-white"
+                >
+                  Disconnect
+                </button>
+              </div>
+              <div class="rounded-lg bg-blue-50 p-3">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="size-4 animate-spin rounded-full border-2 border-blue-500 border-t-transparent"
+                    ></div>
+                    <p class="text-sm font-medium text-blue-700">
+                      Importing data...
+                    </p>
+                  </div>
+                  <p class="text-sm font-medium text-blue-700">45%</p>
+                </div>
+                <div class="mt-2 h-1 w-full rounded-full bg-blue-200">
+                  <div class="h-1 w-[45%] rounded-full bg-blue-500"></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-sky-500"
+                >
+                  <img
+                    alt="Wahoo logo"
+                    class="h-6 w-6"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAefa6f0jMXtMtQXYvHZomGg6kDkS1WAws_5zay4Z4efTbUBrH1gubwTqQrEJphE1lsmnxVVdtuYkM0VLkmNZogdgQJDzgOB6V1hceva7qhDtiYkvSWVKOeIQO6UaqBtSiJkkoPR_ESd_P1Rjff6x1Vl0nI8m8azML8sSAyCd9SgTcXMC7Ur5udkd_LoX8CDXHHSEmCFDfrwKFQYSPsSFI8cJTHEqd5LAF7IikHuhVk0vy10_SEqXc4wpiYN9lbgP6Xhn17Vxw_Aj8p"
+                  />
+                </div>
+                <div class="flex-1">
+                  <p class="text-base font-semibold text-slate-800">Wahoo</p>
+                  <p class="text-sm text-slate-500">Connected</p>
+                </div>
+                <button
+                  class="h-10 rounded-lg bg-red-500 px-4 text-sm font-medium text-white"
+                >
+                  Disconnect
+                </button>
+              </div>
+              <div class="flex flex-col gap-2 rounded-lg bg-green-50 p-3">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="material-symbols-outlined text-lg text-green-700"
+                      >check_circle</span
+                    >
+                    <p class="text-sm font-medium text-green-800">
+                      Import complete
+                    </p>
+                  </div>
+                  <button class="text-green-800">
+                    <span class="material-symbols-outlined text-xl">close</span>
+                  </button>
+                </div>
+                <p class="text-sm text-green-700">
+                  Your historical data from Wahoo has been successfully
+                  imported.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="sticky bottom-0 border-t border-slate-100 bg-white">
+        <nav class="flex justify-around px-4 pt-2 pb-4">
+          <a
+            class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">timeline</span>
+            <p class="text-xs font-medium">Activity</p>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">add_circle</span>
+            <p class="text-xs font-medium">Record</p>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">groups</span>
+            <p class="text-xs font-medium">Clubs</p>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-end gap-1 text-[var(--primary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined">person</span>
+            <p class="text-xs font-bold">Profile</p>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Edit Profile</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+        --foreground-color: #0d171b;
+        --background-color: #f8fafc;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .form-input {
+        background-color: white;
+        border-color: #e2e8f0;
+      }
+      .form-input:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 1px var(--primary-color);
+      }
+      .form-select {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--background-color)]">
+    <div class="max-w-md mx-auto min-h-screen flex flex-col">
+      <header
+        class="flex items-center justify-between p-4 sticky top-0 bg-[var(--background-color)] z-10 border-b border-slate-200"
+      >
+        <button class="p-2 rounded-full hover:bg-slate-100">
+          <span
+            class="material-symbols-outlined text-2xl text-[var(--foreground-color)]"
+            >close</span
+          >
+        </button>
+        <h1
+          class="text-xl font-bold text-center text-[var(--foreground-color)] flex-1"
+        >
+          Edit Profile
+        </h1>
+        <button
+          class="text-base font-bold text-[var(--primary-color)] hover:text-opacity-80 px-4 py-2"
+        >
+          Save
+        </button>
+      </header>
+      <main class="flex-grow p-4 space-y-6">
+        <div class="flex flex-col items-center space-y-4">
+          <div class="relative">
+            <img
+              alt="Profile picture"
+              class="w-32 h-32 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwc4YgvNMa0Fh5VZbBrMFE4XSR7BAE1LYW6Br1q-kA5YF17DozXGJnrStz2ufrIbGluxwj7m9dpbFpyuqwFkfaG6oKPoFreayvlNnACZ6FNk5Oji9YEE-WPbzsO7Dp0aIc90vB4YU3wmb9Z4K40cFLNCsF_kzjgUsq4b8k0giisO7nOvfJOOyiSknpF3dEcUeUvJbj1umfKkwZNt2Mo-v6Ymr3J_FV4aU6W3tllGvpDJ0LWvWmj6wXnV-BGSIHNu1tclsmfh1uoC8F"
+            />
+            <button
+              class="absolute bottom-0 right-0 bg-[var(--primary-color)] text-white p-2 rounded-full hover:bg-opacity-90"
+            >
+              <span class="material-symbols-outlined text-base">edit</span>
+            </button>
+          </div>
+          <button
+            class="text-sm font-semibold text-[var(--primary-color)] hover:text-opacity-80"
+          >
+            Change profile photo
+          </button>
+        </div>
+        <form class="space-y-4">
+          <div>
+            <label
+              class="block text-sm font-medium text-slate-700 mb-1"
+              for="full-name"
+              >Full Name</label
+            >
+            <input
+              class="form-input w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+              id="full-name"
+              type="text"
+              value="Alex Doe"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-sm font-medium text-slate-700 mb-1"
+              for="username"
+              >Username</label
+            >
+            <input
+              class="form-input w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+              id="username"
+              type="text"
+              value="alexdoe"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-sm font-medium text-slate-700 mb-1"
+              for="bio"
+              >Bio</label
+            >
+            <textarea
+              class="form-input w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+              id="bio"
+              placeholder="Describe your athletic journey"
+              rows="4"
+            >
+A passionate cyclist and runner, always looking for the next adventure on two wheels or on foot.</textarea
+            >
+          </div>
+          <div>
+            <label
+              class="block text-sm font-medium text-slate-700 mb-1"
+              for="primary-sport"
+              >Primary Sport</label
+            >
+            <select
+              class="form-select w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+              id="primary-sport"
+            >
+              <option>Cycling</option>
+              <option>Running</option>
+              <option>Both</option>
+            </select>
+          </div>
+          <div>
+            <label
+              class="block text-sm font-medium text-slate-700 mb-1"
+              for="location"
+              >Location</label
+            >
+            <input
+              class="form-input w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+              id="location"
+              placeholder="City, State"
+              type="text"
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label
+                class="block text-sm font-medium text-slate-700 mb-1"
+                for="age"
+                >Age</label
+              >
+              <input
+                class="form-input w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+                id="age"
+                placeholder="Your age"
+                type="number"
+              />
+            </div>
+            <div>
+              <label
+                class="block text-sm font-medium text-slate-700 mb-1"
+                for="weight"
+                >Weight (lbs)</label
+              >
+              <input
+                class="form-input w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+                id="weight"
+                placeholder="Your weight"
+                type="number"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              class="block text-sm font-medium text-slate-700 mb-1"
+              for="height"
+              >Height (ft, in)</label
+            >
+            <div class="grid grid-cols-2 gap-4">
+              <input
+                class="form-input w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+                id="height-ft"
+                placeholder="ft"
+                type="number"
+              />
+              <input
+                class="form-input w-full rounded-md border-slate-300 shadow-sm focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+                id="height-in"
+                placeholder="in"
+                type="number"
+              />
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50"
+    style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden"
+    >
+      <div class="flex-grow">
+        <header class="sticky top-0 z-10 bg-gray-50/80 backdrop-blur-sm">
+          <div class="flex items-center p-4 pb-2 justify-between">
+            <h1
+              class="text-gray-900 text-xl font-bold leading-tight tracking-tight flex-1 text-center pl-10"
+            >
+              Clubs
+            </h1>
+            <div class="flex w-10 items-center justify-end">
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-transparent text-gray-900 gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
+              >
+                <span class="material-symbols-outlined text-3xl">
+                  add_circle
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="px-4 py-3">
+            <label class="flex flex-col min-w-40 h-12 w-full">
+              <div class="flex w-full flex-1 items-stretch rounded-full h-full">
+                <div
+                  class="text-gray-500 flex border-none bg-gray-100 items-center justify-center pl-4 rounded-l-full border-r-0"
+                >
+                  <span class="material-symbols-outlined"> search </span>
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-full text-gray-900 focus:outline-0 focus:ring-0 border-none bg-gray-100 focus:border-none h-full placeholder:text-gray-500 px-4 pl-2 text-base font-normal leading-normal"
+                  placeholder="Search clubs"
+                  value=""
+                />
+              </div>
+            </label>
+          </div>
+        </header>
+        <main class="flex flex-col gap-y-8 py-4">
+          <section>
+            <h2
+              class="text-gray-900 text-xl font-bold leading-tight tracking-tight px-4 pb-3"
+            >
+              Recommended for you
+            </h2>
+            <div
+              class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden pl-4 pr-2"
+            >
+              <div class="flex items-stretch gap-4">
+                <div class="flex flex-col gap-3 rounded-2xl min-w-48">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl flex flex-col"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJHaZHQ48PkLWASfOALyFmoRbSzBlL7nDa5qEe76InauLkVXOzvotjTtMOdIQDIVCz6wwwWdp1E92hmhZuIfhfvOo2owia_iinkLKQwaASwwzuPn-FmCz_C6zx0st9HVVjJZI5QUVtSsOAvILHG2xa3nu4foEtypjmIJGceVFm-Yt0c1vEO_LtnYPJy5mGZ5Hb6lxC7nt5koGxNwZLYFzyYxavCc48p9mh__wJK2kr8vCr2DZHth8fvnj6PnOGB2LtgC9vXUXiVtTV');
+                    "
+                  ></div>
+                  <div>
+                    <p
+                      class="text-gray-900 text-base font-semibold leading-normal"
+                    >
+                      Bike Buddies
+                    </p>
+                    <p class="text-gray-500 text-sm font-normal leading-normal">
+                      Cycling
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3 rounded-2xl min-w-48">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl flex flex-col"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPO_-Vj9zx8yu34j_QDM8p-5k-h2kbnruuRdYRjUluI99XiFJgVfzLdeqFpINOozILLyYyUlNN2jOdGcBfIJ14lhY6GNxXgHuDTvChoksQYimR52rAxZC-ikYlU1F5HGkHjlhtV8XZkyMY0J-5qZNAoVtHEf3_l5xMK0JDpE8HejL2pGPQBT3Z_rhBAhKUfh_sQXr3_0AtOwVUO2eQho1XDXs3qtngiZMdfIXdHQH-cAMJe01jM35TiQ5uKbc1jmk0r4YdTyhYh8HV');
+                    "
+                  ></div>
+                  <div>
+                    <p
+                      class="text-gray-900 text-base font-semibold leading-normal"
+                    >
+                      Runners United
+                    </p>
+                    <p class="text-gray-500 text-sm font-normal leading-normal">
+                      Running
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3 rounded-2xl min-w-48">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl flex flex-col"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoCGT4E2DPZeGupkmHhTEKqfGCO1ZjskdLOvGS4D8XDVkuV0sAn3zOVwn7MvkyM9FDtSkXQYj-U_K7NFxJQ8HNAFFyHYzCfPEnKsxHUymJhaquPxF_mcPO6EC5n2RivLp2K99_2vPbufZ8BjRLQCi0DQ4epy5JOlqCiWvwhjcbt2C78VvcfYSytbi_FL37OpxW_22ufqxVsXek0_eHM5zEvkmGf5OhobEg-HCoMJfCUoL9wnG2bE6GhmUwgiTlS7XXY5jHLzOsnfy1');
+                    "
+                  ></div>
+                  <div>
+                    <p
+                      class="text-gray-900 text-base font-semibold leading-normal"
+                    >
+                      Cycle Squad
+                    </p>
+                    <p class="text-gray-500 text-sm font-normal leading-normal">
+                      Cycling
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3 rounded-2xl min-w-48">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-2xl flex flex-col"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhCAZ7mE4MW6yi2BpqJnLUiSc-MgQ3w1bS6fRqPaB0JeUzt_zVUrjki1d4nm97Yi22FzXv-4hktwfWvDr2zWXKEGL5oIzK4DLwCRiW9lWg04sLoYDpM6K1sgsjvOD4Fxvx4NHChmKu2JlrnI2vEDdfFBcZ8WWsJepwz47dJo-G4R7NlZSu5udpjUyXFHHCTevzFEeCWxTZRbbB9b5qTz7RJvDzm5E4S20NW_dQXCt8tdWezThOUEdSvgcLpZVPSZI_lJZlcTLdpizk');
+                    "
+                  ></div>
+                  <div>
+                    <p
+                      class="text-gray-900 text-base font-semibold leading-normal"
+                    >
+                      Trail Blazers
+                    </p>
+                    <p class="text-gray-500 text-sm font-normal leading-normal">
+                      Running
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2
+              class="text-gray-900 text-xl font-bold leading-tight tracking-tight px-4 pb-3"
+            >
+              Nearby
+            </h2>
+            <div class="flex flex-col">
+              <div
+                class="flex items-center gap-4 px-4 py-3 hover:bg-gray-100 cursor-pointer"
+              >
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEo0dscM7T-uqNW89tPtCJAGtAkjWgBftgNKWk2_MPY7yzueNFgNIQRATniUd1jEOQ9n6sk9ErTFuONTbTmehwta-fVgUS4kOf0xMO8r_WCx7lXJutYbDEo24OSqcFKKN6v0XwSUmxEGYwF-8UqbXKGzqchGpomMOLeCydW-eBKJ0dRa7FxTrrkS97Qy2caYrk3yW7i72yTuERZ8-XiVEhKnumPewov-y4vhfPIFCnmeGCuCa71eCR1V-yO_SdLED_5lweKaNBQe1Y');
+                  "
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p
+                    class="text-gray-900 text-base font-semibold leading-normal line-clamp-1"
+                  >
+                    City Cyclists
+                  </p>
+                  <p
+                    class="text-gray-500 text-sm font-normal leading-normal line-clamp-2"
+                  >
+                    Cycling
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-4 px-4 py-3 hover:bg-gray-100 cursor-pointer"
+              >
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHDCNFOH_uzsLhqmGWbovJwjDcNJJti61I15-fv7HH1-tQKdWIBdOAQQ0FTV34_7amY3s5yd-WTIT1rX6P5i2TaUhfZ_d-x2Rl09AaQdNm5TmfMcPJVXgAU6IsoJltODKDuHN_DCOeK4DRTBpfO4umUDePGkU082FXmAZqWropGWZn9C9sdmhagveuXbLV1NEvKYo1DitxcsPDTY5e5yJVbK6qUw1n4jRBbyjeUvtKleY7PG_ay3tmD060yVFMhsfygPNqZkWIhYVu');
+                  "
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p
+                    class="text-gray-900 text-base font-semibold leading-normal line-clamp-1"
+                  >
+                    Urban Runners
+                  </p>
+                  <p
+                    class="text-gray-500 text-sm font-normal leading-normal line-clamp-2"
+                  >
+                    Running
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-4 px-4 py-3 hover:bg-gray-100 cursor-pointer"
+              >
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIBwo2UfodTk27OvkAUyCIvk1l2HKi9LGBEym9nUveW1nelvLy-c4HgrVHpCltW-fvyytIFnEsJYnUEUfKUs2FYIvNfyDdAOElPnak5qeVMZQEKIcIwcNceEhnoYPswjwZ4UbO4pKKRqyq47oGy8C94pOGRtIaxo4YFYQ7PSfpbgIlIOr5aKQ83soXNmh3kb0O8WNcfLQV68UBIODPtP8hT1FTbftYDLLFKzsLV9XaOUoUYkmr5TcN7Ue8l4cK2C0C-OVDOPTrpZTP');
+                  "
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p
+                    class="text-gray-900 text-base font-semibold leading-normal line-clamp-1"
+                  >
+                    Bike Explorers
+                  </p>
+                  <p
+                    class="text-gray-500 text-sm font-normal leading-normal line-clamp-2"
+                  >
+                    Cycling
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-4 px-4 py-3 hover:bg-gray-100 cursor-pointer"
+              >
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-16"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7SwTsO1AobPEoqqu7ITcAXC73YERv38wBVt-KFBFWmcsXz86_4x_Agxp298-kkhoxydmzw9Q3josCn6BJdGz-DcqpBXFSA9-rPEiz8Dqmkr__5_fICI1EpdrD6vhN83AS0f-StrHZMiC7upt6pTYDYr9Ucc8yjWvDGeu4GDLHXokMZxwFTerX0W3uz8HVkmTcpFMz855JVlOxv2COmb5aBPrYWQXgkSqJ57Y4JfAG_KMEEShO86wFpQlfj9Dc5IAtlGFu_2eL3pTz');
+                  "
+                ></div>
+                <div class="flex flex-col justify-center">
+                  <p
+                    class="text-gray-900 text-base font-semibold leading-normal line-clamp-1"
+                  >
+                    Trail Runners
+                  </p>
+                  <p
+                    class="text-gray-500 text-sm font-normal leading-normal line-clamp-2"
+                  >
+                    Running
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer
+        class="sticky bottom-0 bg-gray-50/80 backdrop-blur-sm border-t border-gray-200"
+      >
+        <nav class="flex justify-around items-center h-20">
+          <a
+            class="flex flex-col items-center justify-center gap-1 text-gray-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> timeline </span>
+            <p class="text-xs font-medium">Activity</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center gap-1 text-gray-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> add_box </span>
+            <p class="text-xs font-medium">Record</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center gap-1 text-[var(--primary-color)]"
+            href="#"
+          >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: 'FILL' 1"
+            >
+              groups
+            </span>
+            <p class="text-xs font-bold">Clubs</p>
+          </a>
+          <a
+            class="flex flex-col items-center justify-center gap-1 text-gray-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> person </span>
+            <p class="text-xs font-medium">Profile</p>
+          </a>
+        </nav>
+        <div class="h-safe-area-bottom bg-gray-50/80"></div>
+      </footer>
+    </div>
+  </body>
+</html>

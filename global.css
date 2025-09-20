@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for the new bright blue theme */
+:root {
+    /* Primary Blue Colors */
+    --color-primary-0: 255 255 255;
+    --color-primary-50: 240 248 255;
+    --color-primary-100: 219 234 254;
+    --color-primary-200: 191 219 254;
+    --color-primary-300: 147 197 253;
+    --color-primary-400: 96 165 250;
+    --color-primary-500: 0 102 255;
+    /* Main brand blue */
+    --color-primary-600: 0 82 204;
+    --color-primary-700: 0 61 153;
+    --color-primary-800: 0 41 102;
+    --color-primary-900: 0 20 51;
+    --color-primary-950: 0 10 25;
+
+    /* Secondary Colors */
+    --color-secondary-0: 255 255 255;
+    --color-secondary-50: 248 249 250;
+    --color-secondary-100: 240 242 245;
+    --color-secondary-200: 224 226 233;
+    --color-secondary-300: 200 205 220;
+    --color-secondary-400: 156 163 175;
+    --color-secondary-500: 107 114 128;
+    --color-secondary-600: 75 85 99;
+    --color-secondary-700: 55 65 81;
+    --color-secondary-800: 31 41 55;
+    --color-secondary-900: 17 24 39;
+    --color-secondary-950: 3 7 18;
+
+    /* Background Colors */
+    --color-background-0: 255 255 255;
+    --color-background-50: 248 249 250;
+    --color-background-100: 240 242 245;
+    --color-background-200: 224 226 233;
+    --color-background-300: 200 205 220;
+    --color-background-400: 156 163 175;
+    --color-background-500: 107 114 128;
+    --color-background-600: 75 85 99;
+    --color-background-700: 55 65 81;
+    --color-background-800: 31 41 55;
+    --color-background-900: 17 24 39;
+    --color-background-950: 3 7 18;
+    --color-background-light: 255 255 255;
+    --color-background-dark: 15 15 15;
+
+    /* Typography Colors */
+    --color-typography-0: 255 255 255;
+    --color-typography-50: 248 249 250;
+    --color-typography-100: 240 242 245;
+    --color-typography-200: 224 226 233;
+    --color-typography-300: 200 205 220;
+    --color-typography-400: 156 163 175;
+    --color-typography-500: 107 114 128;
+    --color-typography-600: 75 85 99;
+    --color-typography-700: 55 65 81;
+    --color-typography-800: 31 41 55;
+    --color-typography-900: 17 24 39;
+    --color-typography-950: 3 7 18;
+    --color-typography-white: 255 255 255;
+    --color-typography-gray: 156 163 175;
+    --color-typography-black: 26 26 26;
+
+    /* Outline Colors */
+    --color-outline-0: 255 255 255;
+    --color-outline-50: 248 249 250;
+    --color-outline-100: 240 242 245;
+    --color-outline-200: 224 226 233;
+    --color-outline-300: 200 205 220;
+    --color-outline-400: 156 163 175;
+    --color-outline-500: 107 114 128;
+    --color-outline-600: 75 85 99;
+    --color-outline-700: 55 65 81;
+    --color-outline-800: 31 41 55;
+    --color-outline-900: 17 24 39;
+    --color-outline-950: 3 7 18;
+
+    /* Indicator Colors */
+    --color-indicator-primary: 0 102 255;
+    --color-indicator-info: 59 130 246;
+    --color-indicator-error: 239 68 68;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background-light: 15 15 15;
+        --color-background-dark: 255 255 255;
+        --color-typography-white: 26 26 26;
+        --color-typography-gray: 107 114 128;
+        --color-typography-black: 255 255 255;
+    }
+}
+
+/* Global styles for the app */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

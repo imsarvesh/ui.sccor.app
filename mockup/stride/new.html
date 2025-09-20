@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+        --secondary-color: #4c809a;
+        --text-primary: #0d171b;
+        --text-secondary: #576b74;
+        --background-color: #f8fafc;
+        --border-color: #e2e8f0;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[var(--background-color)]"
+    style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+  >
+    <div
+      class="relative flex h-screen w-full flex-col justify-between overflow-hidden"
+    >
+      <header class="flex items-center justify-between p-4">
+        <button class="text-[var(--text-primary)]">
+          <span class="material-symbols-outlined"> arrow_back_ios_new </span>
+        </button>
+        <div class="flex-1"></div>
+        <button class="text-base font-bold text-[var(--primary-color)]">
+          Next
+        </button>
+      </header>
+      <main
+        class="flex flex-1 flex-col items-center justify-center px-6 text-center"
+      >
+        <div class="mb-4">
+          <span
+            class="material-symbols-outlined text-6xl text-[var(--primary-color)]"
+          >
+            directions_bike
+          </span>
+          <span
+            class="material-symbols-outlined text-6xl text-[var(--primary-color)]"
+          >
+            directions_run
+          </span>
+        </div>
+        <h1 class="text-3xl font-bold text-[var(--text-primary)]">
+          What are you into?
+        </h1>
+        <p class="mt-2 max-w-sm text-[var(--text-secondary)]">
+          Tell us what you're passionate about so we can tailor your experience.
+        </p>
+        <div class="mt-8 flex w-full max-w-xs flex-col gap-4">
+          <label
+            class="group flex cursor-pointer items-center gap-4 rounded-full border border-[var(--border-color)] bg-white p-4 shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--primary-color)] has-[:checked]:text-white"
+          >
+            <input class="hidden" name="interest" type="radio" />
+            <span
+              class="material-symbols-outlined text-2xl text-[var(--primary-color)] group-has-[:checked]:text-white"
+            >
+              directions_bike
+            </span>
+            <span
+              class="flex-1 text-left font-semibold text-[var(--text-primary)] group-has-[:checked]:text-white"
+              >Cycling</span
+            >
+          </label>
+          <label
+            class="group flex cursor-pointer items-center gap-4 rounded-full border border-[var(--border-color)] bg-white p-4 shadow-sm transition-all has-[:checked]:border-[var(--primary-color)] has-[:checked]:bg-[var(--primary-color)] has-[:checked]:text-white"
+          >
+            <input class="hidden" name="interest" type="radio" />
+            <span
+              class="material-symbols-outlined text-2xl text-[var(--primary-color)] group-has-[:checked]:text-white"
+            >
+              directions_run
+            </span>
+            <span
+              class="flex-1 text-left font-semibold text-[var(--text-primary)] group-has-[:checked]:text-white"
+              >Running</span
+            >
+          </label>
+        </div>
+      </main>
+      <footer class="border-t border-[var(--border-color)] bg-white p-4">
+        <nav class="flex items-center justify-around">
+          <a
+            class="flex flex-col items-center gap-1 text-[var(--secondary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> home </span>
+            <span class="text-xs">Home</span>
+          </a>
+          <a
+            class="flex flex-col items-center gap-1 text-[var(--secondary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> leaderboard </span>
+            <span class="text-xs">Activity</span>
+          </a>
+          <a
+            class="flex flex-col items-center gap-1 text-[var(--primary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> add_circle </span>
+            <span class="text-xs">New</span>
+          </a>
+          <a
+            class="flex flex-col items-center gap-1 text-[var(--secondary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> groups </span>
+            <span class="text-xs">Community</span>
+          </a>
+          <a
+            class="flex flex-col items-center gap-1 text-[var(--text-primary)] font-bold"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> person </span>
+            <span class="text-xs">Profile</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

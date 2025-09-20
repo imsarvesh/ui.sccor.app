@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden"
+      style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+    >
+      <div class="flex flex-col gap-6 p-4">
+        <div class="flex items-center justify-between">
+          <button class="text-slate-800">
+            <span class="material-symbols-outlined text-3xl"> close </span>
+          </button>
+          <h1 class="text-xl font-bold text-slate-900">Create Event</h1>
+          <div class="w-8"></div>
+        </div>
+        <div class="space-y-4">
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+            >
+              festival
+            </span>
+            <input
+              class="form-input w-full rounded-xl border-slate-200 bg-white py-3 pl-10 pr-4 text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500"
+              placeholder="Event Title"
+              value=""
+            />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+              >
+                calendar_today
+              </span>
+              <input
+                class="form-input w-full rounded-xl border-slate-200 bg-white py-3 pl-10 pr-4 text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500"
+                onblur="(this.type='text')"
+                onfocus="(this.type='date')"
+                placeholder="Date"
+                type="text"
+              />
+            </div>
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+              >
+                schedule
+              </span>
+              <input
+                class="form-input w-full rounded-xl border-slate-200 bg-white py-3 pl-10 pr-4 text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500"
+                onblur="(this.type='text')"
+                onfocus="(this.type='time')"
+                placeholder="Time"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+            >
+              location_on
+            </span>
+            <input
+              class="form-input w-full rounded-xl border-slate-200 bg-white py-3 pl-10 pr-4 text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500"
+              placeholder="Location"
+              value=""
+            />
+          </div>
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-3 top-4 text-slate-400"
+            >
+              description
+            </span>
+            <textarea
+              class="form-textarea w-full rounded-xl border-slate-200 bg-white py-3 pl-10 pr-4 text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500"
+              placeholder="Description"
+              rows="4"
+            ></textarea>
+          </div>
+          <div class="relative">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+            >
+              groups
+            </span>
+            <input
+              class="form-input w-full rounded-xl border-slate-200 bg-white py-3 pl-10 pr-4 text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500"
+              placeholder="Participant Limit"
+              type="number"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="space-y-2 rounded-xl bg-white p-2">
+          <div class="flex items-center justify-between p-2">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-slate-500">
+                public
+              </span>
+              <p class="text-base font-medium text-slate-800">Public Event</p>
+            </div>
+            <label
+              class="relative flex h-6 w-11 cursor-pointer items-center rounded-full bg-slate-200 transition-colors has-[:checked]:bg-blue-500"
+            >
+              <input class="peer sr-only" type="checkbox" />
+              <span
+                class="inline-block h-5 w-5 transform rounded-full bg-white shadow-md transition-transform peer-checked:translate-x-5"
+              ></span>
+            </label>
+          </div>
+          <hr class="border-slate-100" />
+          <button
+            class="flex w-full items-center justify-between p-2 text-left"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-slate-500">
+                person_add
+              </span>
+              <p class="text-base font-medium text-slate-800">Invite Users</p>
+            </div>
+            <span class="material-symbols-outlined text-slate-400">
+              chevron_right
+            </span>
+          </button>
+          <hr class="border-slate-100" />
+          <button
+            class="flex w-full items-center justify-between p-2 text-left"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-slate-500">
+                diversity_3
+              </span>
+              <p class="text-base font-medium text-slate-800">Invite Clubs</p>
+            </div>
+            <span class="material-symbols-outlined text-slate-400">
+              chevron_right
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="sticky bottom-0 bg-slate-50/80 p-4 backdrop-blur-sm">
+        <button
+          class="w-full rounded-xl bg-[#13a4ec] py-3.5 text-center text-base font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-600 active:scale-95"
+        >
+          Create Event
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

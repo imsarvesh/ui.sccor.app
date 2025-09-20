@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden"
+      style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+    >
+      <div class="flex-grow">
+        <header class="sticky top-0 z-10 bg-slate-50/80 backdrop-blur-sm">
+          <div class="flex items-center p-4 pb-3">
+            <button
+              class="flex size-10 items-center justify-center rounded-full text-slate-600 hover:bg-slate-200"
+            >
+              <span class="material-symbols-outlined">close</span>
+            </button>
+            <h1
+              class="flex-1 text-center text-lg font-bold tracking-tight text-slate-800"
+            >
+              New Challenge
+            </h1>
+            <div class="w-10"></div>
+          </div>
+        </header>
+        <main class="p-4">
+          <section class="mb-8">
+            <h2
+              class="text-xl font-bold leading-tight tracking-tight text-slate-800 mb-4"
+            >
+              Challenge Type
+            </h2>
+            <div class="grid grid-cols-3 gap-3">
+              <label
+                class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 text-center text-slate-700 has-[:checked]:border-2 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec]/10 has-[:checked]:text-[#13a4ec] cursor-pointer transition-all duration-200"
+              >
+                <span class="material-symbols-outlined text-3xl mb-1"
+                  >directions_run</span
+                >
+                <span class="text-sm font-semibold">Distance</span>
+                <input
+                  checked=""
+                  class="invisible absolute"
+                  name="challenge_type"
+                  type="radio"
+                />
+              </label>
+              <label
+                class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 text-center text-slate-700 has-[:checked]:border-2 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec]/10 has-[:checked]:text-[#13a4ec] cursor-pointer transition-all duration-200"
+              >
+                <span class="material-symbols-outlined text-3xl mb-1"
+                  >timer</span
+                >
+                <span class="text-sm font-semibold">Time</span>
+                <input
+                  class="invisible absolute"
+                  name="challenge_type"
+                  type="radio"
+                />
+              </label>
+              <label
+                class="flex flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white p-4 text-center text-slate-700 has-[:checked]:border-2 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec]/10 has-[:checked]:text-[#13a4ec] cursor-pointer transition-all duration-200"
+              >
+                <span class="material-symbols-outlined text-3xl mb-1"
+                  >landscape</span
+                >
+                <span class="text-sm font-semibold">Elevation</span>
+                <input
+                  class="invisible absolute"
+                  name="challenge_type"
+                  type="radio"
+                />
+              </label>
+            </div>
+          </section>
+          <section class="mb-8">
+            <h2
+              class="text-xl font-bold leading-tight tracking-tight text-slate-800 mb-4"
+            >
+              Duration
+            </h2>
+            <div class="flex flex-wrap gap-3">
+              <label
+                class="text-sm font-medium leading-normal flex flex-1 items-center justify-center rounded-full border border-slate-300 px-4 h-11 text-slate-700 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec] has-[:checked]:text-white relative cursor-pointer transition-colors duration-200"
+              >
+                1 Week
+                <input
+                  checked=""
+                  class="invisible absolute"
+                  name="duration"
+                  type="radio"
+                />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex flex-1 items-center justify-center rounded-full border border-slate-300 px-4 h-11 text-slate-700 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec] has-[:checked]:text-white relative cursor-pointer transition-colors duration-200"
+              >
+                1 Month
+                <input
+                  class="invisible absolute"
+                  name="duration"
+                  type="radio"
+                />
+              </label>
+              <label
+                class="text-sm font-medium leading-normal flex flex-1 items-center justify-center rounded-full border border-slate-300 px-4 h-11 text-slate-700 has-[:checked]:border-[#13a4ec] has-[:checked]:bg-[#13a4ec] has-[:checked]:text-white relative cursor-pointer transition-colors duration-200"
+              >
+                Custom
+                <input
+                  class="invisible absolute"
+                  name="duration"
+                  type="radio"
+                />
+              </label>
+            </div>
+          </section>
+          <section>
+            <h2
+              class="text-xl font-bold leading-tight tracking-tight text-slate-800 mb-4"
+            >
+              Participants
+            </h2>
+            <button
+              class="flex w-full items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 text-left hover:bg-slate-100 transition-colors duration-200"
+            >
+              <div
+                class="flex size-10 items-center justify-center rounded-full bg-[#13a4ec]/10 text-[#13a4ec]"
+              >
+                <span class="material-symbols-outlined">group_add</span>
+              </div>
+              <div class="flex-1">
+                <p class="text-base font-semibold text-slate-800">
+                  Invite Friends
+                </p>
+                <p class="text-sm text-slate-500">
+                  Challenge with your friends
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-slate-400"
+                >chevron_right</span
+              >
+            </button>
+          </section>
+        </main>
+      </div>
+      <footer class="sticky bottom-0 bg-slate-50/80 backdrop-blur-sm">
+        <div class="p-4">
+          <button
+            class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 bg-[#13a4ec] text-white text-lg font-bold leading-normal tracking-wide shadow-lg shadow-[#13a4ec]/30 hover:bg-[#108dce] transition-colors duration-200"
+          >
+            <span class="truncate">Create Challenge</span>
+          </button>
+        </div>
+        <nav class="flex justify-around border-t border-slate-200 pt-2 pb-4">
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">bar_chart</span>
+            <span class="text-xs font-medium">Feed</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">track_changes</span>
+            <span class="text-xs font-medium">Record</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-[#13a4ec]"
+            href="#"
+          >
+            <span class="material-symbols-outlined">workspace_premium</span>
+            <span class="text-xs font-bold">Challenges</span>
+          </a>
+          <a
+            class="flex flex-col items-center justify-end gap-1 text-slate-500"
+            href="#"
+          >
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-xs font-medium">Profile</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

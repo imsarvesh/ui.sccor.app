@@ -1,0 +1,161 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+        --secondary-color: #4c809a;
+        --background-color: #f8fafc;
+        --text-primary: #0d171b;
+        --text-secondary: #4c809a;
+        --card-background: #ffffff;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[var(--background-color)]"
+    style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden"
+    >
+      <div class="flex-grow">
+        <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+          <div class="flex items-center p-4 pb-2 justify-between">
+            <button class="text-[var(--text-primary)]">
+              <span class="material-symbols-outlined text-3xl"> close </span>
+            </button>
+            <h1 class="text-[var(--text-primary)] text-xl font-bold">Record</h1>
+            <div class="w-8"></div>
+          </div>
+          <div class="px-4">
+            <div class="flex border-b border-slate-200">
+              <a
+                class="flex-1 text-center py-3 border-b-2 border-transparent text-[var(--text-secondary)]"
+                href="#"
+              >
+                <span class="text-sm font-bold">Run</span>
+              </a>
+              <a
+                class="flex-1 text-center py-3 border-b-2 border-[var(--primary-color)] text-[var(--text-primary)]"
+                href="#"
+              >
+                <span class="text-sm font-bold">Ride</span>
+              </a>
+            </div>
+          </div>
+        </header>
+        <main class="p-4">
+          <div
+            class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-2xl object-cover shadow-lg"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCl11F9jIBQHsOFky07iH7Dz1jYq_dEsDOaaRcvFhjp30XsPe0zjy55FTU1zxSvVpPRqg6XLBAA98MxngaQDJwxwmWPH1fkQTrTH1EIgb1wqpaYLtwJEwi5ux65i8_AiMukTuvnrcvdHHODpZ0TG_GO50jxmnf4WuMRicP4JSgx9T9SvjyB7EKKtcRmn9nrXzX8FFPmrZo0rF_nmMO23XFUKLryWV1Kxh_mLfPlma8gSO5Egx6VQlm3Hx2v53irvqeDGJsDYKXaTUzT');
+            "
+          ></div>
+          <div class="grid grid-cols-3 gap-3 mt-4 text-center">
+            <div
+              class="flex flex-col gap-1 rounded-2xl p-4 bg-[var(--card-background)] shadow-sm"
+            >
+              <p class="text-[var(--text-secondary)] text-sm font-medium">
+                Distance
+              </p>
+              <p class="text-[var(--text-primary)] text-2xl font-bold">
+                0.00
+                <span class="text-base font-medium text-slate-500">mi</span>
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-1 rounded-2xl p-4 bg-[var(--card-background)] shadow-sm"
+            >
+              <p class="text-[var(--text-secondary)] text-sm font-medium">
+                Time
+              </p>
+              <p class="text-[var(--text-primary)] text-2xl font-bold">
+                00:00:00
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-1 rounded-2xl p-4 bg-[var(--card-background)] shadow-sm"
+            >
+              <p class="text-[var(--text-secondary)] text-sm font-medium">
+                Pace
+              </p>
+              <p class="text-[var(--text-primary)] text-2xl font-bold">
+                00:00
+                <span class="text-base font-medium text-slate-500">/ mi</span>
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="bg-white/80 backdrop-blur-sm sticky bottom-0 z-10 pb-safe">
+        <div class="px-4 py-4 flex items-center justify-center gap-4">
+          <button
+            class="flex-1 flex items-center justify-center rounded-full h-14 bg-slate-200 text-slate-800 text-lg font-bold"
+          >
+            <span class="material-symbols-outlined mr-2"> pause </span>
+            Pause
+          </button>
+          <button
+            class="flex-1 flex items-center justify-center rounded-full h-14 bg-[var(--primary-color)] text-white text-lg font-bold shadow-lg shadow-blue-500/30"
+          >
+            <span class="material-symbols-outlined mr-2"> play_arrow </span>
+            Start
+          </button>
+        </div>
+        <div class="flex border-t border-slate-200">
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 py-2 text-[var(--primary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> timeline </span>
+            <span class="text-xs font-medium">Activity</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 py-2 text-[var(--text-secondary)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> add_circle </span>
+            <span class="text-xs font-medium">New</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 py-2 text-[var(--text-secondary)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> groups </span>
+            <span class="text-xs font-medium">Community</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 py-2 text-[var(--text-secondary)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> person </span>
+            <span class="text-xs font-medium">Profile</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+        --secondary-color: #e7eff3;
+        --text-primary: #0d171b;
+        --text-secondary: #4c809a;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50"
+    style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col justify-between group/design-root overflow-x-hidden"
+    >
+      <div class="flex-grow">
+        <header class="sticky top-0 z-10 bg-slate-50/80 backdrop-blur-sm">
+          <div class="flex items-center p-4 pb-2 justify-between">
+            <button
+              class="text-[var(--text-primary)] flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-200 transition-colors"
+            >
+              <span class="material-symbols-outlined text-2xl">arrow_back</span>
+            </button>
+            <h2
+              class="text-[var(--text-primary)] text-lg font-bold leading-tight tracking-tight flex-1 text-center"
+            >
+              Connections
+            </h2>
+            <div class="w-10"></div>
+          </div>
+          <div class="px-4 pt-2">
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-secondary)]"
+                >search</span
+              >
+              <input
+                class="w-full rounded-full border border-slate-200 bg-white py-2 pl-10 pr-4 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]"
+                placeholder="Search followers..."
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="px-4 mt-4">
+            <div class="flex border-b border-slate-200">
+              <a
+                class="flex-1 text-center py-3 border-b-2 border-[var(--primary-color)] text-[var(--primary-color)]"
+                href="#"
+              >
+                <p class="text-sm font-semibold">Followers</p>
+              </a>
+              <a
+                class="flex-1 text-center py-3 border-b-2 border-transparent text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                href="#"
+              >
+                <p class="text-sm font-semibold">Following</p>
+              </a>
+            </div>
+          </div>
+        </header>
+        <main class="divide-y divide-slate-200">
+          <div class="flex items-center gap-4 p-4">
+            <img
+              alt="Ethan Carter"
+              class="h-12 w-12 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7t6X7_9l2axtYfUItMiHkJkpA0zeKfR31ZTXfOmP_LWYlW_FoGMLSF9cG7Xx0h3iSviowdZEgZCj0_9GKuqbR5ZZyrfP5saYF5xwiEQZczzgPoQPXEzQhZFnc1eIM701NaCV3fbt-qxsKNkKxa1cbvzgRx5NDTGU4eMBWfnAxbIzGjMbXH75LIT5e6Iipptif9G5PVId63pXakNusGC__QlbDPBOY2regVK4QUdwUQY2_WJLMNaq6od3JLNWrPlyY3I4ppaEDc55c"
+            />
+            <div class="flex-grow">
+              <p
+                class="text-[var(--text-primary)] text-base font-semibold leading-tight"
+              >
+                Ethan Carter
+              </p>
+              <p class="text-[var(--text-secondary)] text-sm leading-tight">
+                12 mutual friends
+              </p>
+            </div>
+            <button
+              class="shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--text-primary)] bg-[var(--secondary-color)] hover:bg-slate-300 transition-colors"
+            >
+              Remove
+            </button>
+          </div>
+          <div class="flex items-center gap-4 p-4">
+            <img
+              alt="Olivia Bennett"
+              class="h-12 w-12 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6STIGDivRCUSKtMhSFoX-NfrAyphz1JzH2vs88KcXBFVRW25u6Eze4pUcUCf62i_TpQ4C7FMwjbR0gp4GPTMWW_IIAJjsv7Bp5Y_3uxb0ViwyftmTwfs_k9qdaS_wkpwDU6WCFrBt4LFb3rYZzw6_n0th3wa4z_r0jVlKCFWhFddixW5SYk9a_mcU_NYQ33Zctyz0KjTah6Sscs4SfDukpjFSDeKNfApdNC0ouyKDVoNWqSxw45lbCrJSAq5J5eqEcAI6lmNCGCpz"
+            />
+            <div class="flex-grow">
+              <p
+                class="text-[var(--text-primary)] text-base font-semibold leading-tight"
+              >
+                Olivia Bennett
+              </p>
+              <p class="text-[var(--text-secondary)] text-sm leading-tight">
+                2 mutual friends
+              </p>
+            </div>
+            <button
+              class="shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--text-primary)] bg-[var(--secondary-color)] hover:bg-slate-300 transition-colors"
+            >
+              Remove
+            </button>
+          </div>
+          <div class="flex items-center gap-4 p-4">
+            <img
+              alt="Noah Thompson"
+              class="h-12 w-12 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5gz7Q4YPDeVxWU20wDnPCrhEV02amNkToKPWN7TTVIhzIUj8eJ6zYG1XdZV1eGDZzJzznPASNvG_i8lY2ZgvctruqIIwoj2hOBI1l5ta4WMXe3wU9lMIs7TCZJETY90ztMqak8ItJPBAFY29GlVsmwXFzhM1RP5-HFXv4zeNaAr9VD9xbrhncbZUcPFREvw4l9VGqSQy1IHesn6dCSkxZHZzVny5Ek4H59VEyVtOa4T-0WPdF1DBPBkQgOeEDo-MPRFPsVk2P52Et"
+            />
+            <div class="flex-grow">
+              <p
+                class="text-[var(--text-primary)] text-base font-semibold leading-tight"
+              >
+                Noah Thompson
+              </p>
+              <p class="text-[var(--text-secondary)] text-sm leading-tight">
+                1 mutual friend
+              </p>
+            </div>
+            <button
+              class="shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--text-primary)] bg-[var(--secondary-color)] hover:bg-slate-300 transition-colors"
+            >
+              Remove
+            </button>
+          </div>
+          <div class="flex items-center gap-4 p-4">
+            <img
+              alt="Ava Harper"
+              class="h-12 w-12 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0t8hGCGLufnutwTioceGJ91GRysWve3X0HG98zzS7PgeUYinLzZk8zCAyTD1nUVCyqBgRbDVvfd6OSTeC7ou78aOOaOkpnWiqJaYqSw1FJK7FEU0CyBJBMY5oQmEUbN039SulsY6q_s_zuVEZ_YJRhDuvTc4BiVLrcg1AVFruRVTdlD1xY0NBhWvaoqSurpXzgW_7rd3KBAjisEM96nzPLIdK9Uly15m9EIrRiXFrjij_iaExtewiCiCX8ROTAyWyQlrd46Nf9TvA"
+            />
+            <div class="flex-grow">
+              <p
+                class="text-[var(--text-primary)] text-base font-semibold leading-tight"
+              >
+                Ava Harper
+              </p>
+              <p class="text-[var(--text-secondary)] text-sm leading-tight">
+                1 mutual friend
+              </p>
+            </div>
+            <button
+              class="shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--text-primary)] bg-[var(--secondary-color)] hover:bg-slate-300 transition-colors"
+            >
+              Remove
+            </button>
+          </div>
+          <div class="flex items-center gap-4 p-4">
+            <img
+              alt="Liam Foster"
+              class="h-12 w-12 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6xSTMJdVR0enJoPM0ncf-LQkFsaJDJTlov2fFWHj0fujVoZyd_-vIQH5oiximaroA5QBeVmlXlCnCKgLp6m-xi1JBulixPu38qeCnFLvY6WxLOLAa2wniVLNbU4y_hBeRYnMzJYdJ-xBX8Wovf-seeTBeawDFojbEfQkeKj70fkCXbzWNPQCFl0y_-xz3xSHbKi22z8is-STV6QZiI95DsgIt4CHwAUDQo0U3BVxZsziAX0MF91ErptrAfv4eoWZa2P1k1-FAlA3z"
+            />
+            <div class="flex-grow">
+              <p
+                class="text-[var(--text-primary)] text-base font-semibold leading-tight"
+              >
+                Liam Foster
+              </p>
+              <p class="text-[var(--text-secondary)] text-sm leading-tight">
+                1 mutual friend
+              </p>
+            </div>
+            <button
+              class="shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold text-[var(--text-primary)] bg-[var(--secondary-color)] hover:bg-slate-300 transition-colors"
+            >
+              Remove
+            </button>
+          </div>
+        </main>
+      </div>
+      <footer class="sticky bottom-0 bg-slate-50/80 backdrop-blur-sm">
+        <div class="flex justify-around border-t border-slate-200 py-2">
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">bar_chart</span>
+            <span class="text-xs">Dashboard</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">radio_button_checked</span>
+            <span class="text-xs">Record</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--primary-color)]"
+            href="#"
+          >
+            <span class="material-symbols-outlined">groups</span>
+            <span class="text-xs font-semibold">Connections</span>
+          </a>
+          <a
+            class="flex flex-1 flex-col items-center justify-center gap-1 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-xs">Profile</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
