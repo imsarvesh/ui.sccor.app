@@ -54,7 +54,11 @@ const NotificationItem: React.FC<NotificationItemProps> = ({
 
   return (
     <Box style={styles.container}>
-      <Image source={{ uri: avatar }} style={styles.avatar} />
+      <Image
+        source={{ uri: avatar }}
+        style={styles.avatar}
+        alt={`${name} profile picture`}
+      />
       <Box style={styles.content}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.message}>{message}</Text>

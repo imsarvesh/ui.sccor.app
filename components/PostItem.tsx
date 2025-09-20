@@ -67,6 +67,7 @@ const PostItem = ({ post }: { post: PostItemProps }) => {
           <Image
             source={{ uri: user?.image }}
             className="w-14 h-14 rounded-full mr-4"
+            alt={`${user?.name} profile picture`}
           />
           <VStack className="flex-1">
             <Text className="text-base font-noto-sans-medium text-typography-black dark:text-typography-white">
@@ -88,7 +89,11 @@ const PostItem = ({ post }: { post: PostItemProps }) => {
           </Text>
 
           {type === "image" && image && (
-            <Image source={{ uri: image }} className="w-full h-50 rounded-lg" />
+            <Image
+              source={{ uri: image }}
+              className="w-full h-50 rounded-lg"
+              alt="Post image"
+            />
           )}
 
           {type === "scoreboard" && scoreboard && (

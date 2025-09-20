@@ -68,7 +68,11 @@ export const MessageItem: React.FC<MessageItemProps> = ({
 
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      <Image source={{ uri: avatar }} style={styles.avatar} />
+      <Image
+        source={{ uri: avatar }}
+        style={styles.avatar}
+        alt={`${name} profile picture`}
+      />
       <View style={styles.content}>
         <Text style={styles.name} numberOfLines={1}>
           {name}

@@ -10,7 +10,11 @@ interface StoryItemProps {
 const StoryItem: React.FC<StoryItemProps> = ({ name, image }) => {
   return (
     <VStack className="items-center w-16">
-      <Image source={{ uri: image }} className="w-16 h-16 rounded-full mb-2" />
+      <Image
+        source={{ uri: image }}
+        className="w-16 h-16 rounded-full mb-2"
+        alt={`${name} story`}
+      />
       <Text className="text-xs font-noto-sans text-center text-typography-black dark:text-typography-white">
         {name}
       </Text>

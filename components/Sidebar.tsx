@@ -226,7 +226,11 @@ const Sidebar: React.FC<SidebarProps> = ({ visible, onClose }) => {
               className="justify-center"
               alignItems="center"
             >
-              <Image source={profileImage} style={styles.avatar} />
+              <Image
+                source={profileImage}
+                style={styles.avatar}
+                alt="Profile picture"
+              />
               {!isLoggedIn && (
                 <Pressable
                   style={styles.loginButton}

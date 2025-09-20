@@ -37,6 +37,7 @@ const SuggestedUsers: React.FC<SuggestedUsersProps> = ({ users }) => {
             <Image
               source={{ uri: user.avatar }}
               className="w-20 h-20 rounded-full mb-3"
+              alt={`${user.name} profile picture`}
             />
             <Text
               className="text-base font-medium mb-3 text-center"

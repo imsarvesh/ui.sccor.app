@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../components/ui";
 import { Header } from "../components";
 import { Fonts } from "../constants/Fonts";
 import { useThemeColor } from "../hooks/useThemeColor";

@@ -1,7 +1,7 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
 import React from "react";
 import { ActivityIndicator, Image, StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../components/ui";
 export default function LandingScreen() {
   const backgroundColor = useThemeColor({}, "background");
   const textColor = useThemeColor({}, "text");
@@ -108,6 +108,7 @@ export default function LandingScreen() {
           <Image
             source={require("@/assets/images/logo.png")}
             style={styles.logo}
+            alt="App logo"
           />
         </View>
 

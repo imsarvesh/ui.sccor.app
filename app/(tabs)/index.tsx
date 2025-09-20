@@ -12,7 +12,7 @@ import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { useCallback, useRef, useState } from "react";
 import { RefreshControl, ScrollView, StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../components/ui";
 
 const HomePage = () => {
   const colorScheme = useColorScheme();

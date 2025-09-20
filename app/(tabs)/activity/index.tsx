@@ -6,7 +6,7 @@ import { useThemeColor } from "@/hooks/useThemeColor";
 import { router } from "expo-router";
 import React, { useState } from "react";
 import { Alert, ScrollView, TextInput, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../../components/ui";
 
 interface ActivityItemProps {
   icon: string;

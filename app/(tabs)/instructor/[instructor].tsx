@@ -5,7 +5,7 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 import { useRouter } from "expo-router";
 import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../../components/ui";
 
 interface Credential {
   id: string;
@@ -122,6 +122,7 @@ export default function InstructorProfileScreen() {
       <Image
         source={{ uri: story.imageUrl }}
         className="w-full aspect-square rounded-xl mb-4"
+        alt={`${story.title} success story`}
       />
       <View>
         <Text
@@ -146,6 +147,7 @@ export default function InstructorProfileScreen() {
         <Image
           source={{ uri: testimonial.avatarUrl }}
           className="w-10 h-10 rounded-full"
+          alt={`${testimonial.name} profile picture`}
         />
         <View className="flex-1">
           <Text
@@ -208,6 +210,7 @@ export default function InstructorProfileScreen() {
                   uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuDXi3Qd_RoPZ-mP8-0un3IYbe2rqcYepQnH0ZhnA4SxtXaatLBpaCqmtAO4lxgR5msYpE4FlAHvUbI_VJL3C3FHZzSogfa4LbxaoseC8g0Xpl6uQYCdBCNBExSXfnt5TG5MhTm_NAJtznyAScPWUVJOZ5Q8_24lbTEn4nQVEywv3WDDT2-g0bdMgq8zgDnn70LABAY-KYhuqrS4n4dmdQWLPEoPaM-2Un_OdVcsn5AU28xjWwwcVhm2YZrIVr8f5XM359aI7T2bPro",
                 }}
                 className="w-32 h-32 rounded-full"
+                alt="Ethan Carter profile picture"
               />
               <View className="flex-col items-center justify-center">
                 <Text

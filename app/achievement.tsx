@@ -11,7 +11,7 @@ import {
 import { Colors } from "../constants/Colors";
 import { Fonts } from "../constants/Fonts";
 import { useColorScheme } from "../hooks/useColorScheme";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../components/ui";
 
 interface AddAchievementPageProps {
   // Add any props you might need for the page
@@ -160,6 +160,7 @@ const AddAchievementPage: React.FC<AddAchievementPageProps> = () => {
             }}
             style={styles.optionImage}
             resizeMode="cover"
+            alt="Personal Achievement option"
           />
         </TouchableOpacity>
 
@@ -180,6 +181,7 @@ const AddAchievementPage: React.FC<AddAchievementPageProps> = () => {
             }}
             style={styles.optionImage}
             resizeMode="cover"
+            alt="Match Result option"
           />
         </TouchableOpacity>
 
@@ -202,6 +204,7 @@ const AddAchievementPage: React.FC<AddAchievementPageProps> = () => {
                 }}
                 style={styles.optionImage}
                 resizeMode="cover"
+                alt="Selected achievement preview"
               />
             </View>
           </View>

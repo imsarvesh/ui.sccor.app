@@ -2,7 +2,7 @@ import { Box } from "@/components/ui";
 import { router } from "expo-router";
 import React, { useState } from "react";
 import { StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../components/ui";
 import {
   ActionButton,
   ModalHeader,

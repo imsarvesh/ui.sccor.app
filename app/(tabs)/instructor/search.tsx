@@ -10,7 +10,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Image, ScrollView, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../../components/ui";
 
 interface Instructor {
   id: string;
@@ -155,6 +155,7 @@ export default function SearchInstructorScreen() {
                 <Image
                   source={{ uri: instructor.avatar }}
                   className="w-14 h-14 rounded-full mr-4"
+                  alt={`${instructor.name} profile picture`}
                 />
                 <VStack className="flex-1 justify-center mr-4">
                   <ThemedText

@@ -112,6 +112,7 @@ export default function AvatarModal({
                     styles.avatarImage,
                     selectedAvatar === avatar && styles.selectedAvatar,
                   ]}
+                  alt="Avatar option"
                 />
               </TouchableOpacity>
             ))}

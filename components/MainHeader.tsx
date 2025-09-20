@@ -89,6 +89,7 @@ const Header: React.FC<HeaderProps> = ({
                 height: 32,
                 borderRadius: 16,
               }}
+              alt="Profile picture"
             />
           </View>
         </Pressable>

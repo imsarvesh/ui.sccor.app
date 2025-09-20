@@ -14,7 +14,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../components/ui";
 
 export default function ProfileScreen() {
   const { username }: { username: string } = useLocalSearchParams();
@@ -66,6 +66,7 @@ export default function ProfileScreen() {
               uri: profile.image,
             }}
             className="w-32 h-32 rounded-full mb-4"
+            alt={`${profile.name} profile picture`}
           />
           <Text
             className="text-[22px] font-bold text-center mb-1"
@@ -156,6 +157,7 @@ export default function ProfileScreen() {
                 uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuCIFMNWrVJD_SuCcwdEZPaYsX-1wpoJKMOH7MYAOF2mc6d2U62yeTZTDOi0xymrzYF2v2Sk4xrwOry0BGM68Pgloz4osvGqQjDHOHdCK-0nRnHNvHyjNqVsA58VoHLrMJ6SygE8oPAy7a9t-8RuI0IPcIGi7IIT0CiXe2gzTaErsQEYlIJYYFayc5JZTsXu2gtcyMnZ2-L2yeByjE_k0bPgJtI3-gFyoinh2cGNx-IfRpFoqirNhLICRD6w0xkQXTv6CLO1WmQpUvY",
               }}
               className="w-full aspect-square rounded-xl mb-4"
+              alt="Marathon Finisher achievement"
             />
             <Text
               className="text-base font-medium mb-1"
@@ -173,6 +175,7 @@ export default function ProfileScreen() {
                 uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuAw0hLbeMGUOXm-5ahy83-FM-AEtAM4nBN-zvCMguzFFjvGloCt2c9gJParNSTGDI09dFsB2ZLgqEwhPPpBd4LfU76CXxJzWaRv6G9YF6cS60ZGUcDUgeUt1WOYkBON1ZPjnxdsJGIzLa7vHm944cTg8lNqa1CjJ8AqhbTXrslv8rHL3qmp8i-oJ52vXwb-uUeblkbWuFIoy8ND7__1QK71T0BpAjv2JmOFJApf1218RD48bATV-5lgh3sLJrq2dZxJOp-JSHXjtcQ",
               }}
               className="w-full aspect-square rounded-xl mb-4"
+              alt="Strength Training achievement"
             />
             <Text
               className="text-base font-medium mb-1"
@@ -190,6 +193,7 @@ export default function ProfileScreen() {
                 uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuDkp-nhacyDT9H3-snPfWPoncPnO6xJvpqtkangBqLneUWijqaGB7Ga9xPzZu4RmlzuM5RlguSZ-oK66WbhHTKfWyFHbHIUhSjEbdaf-TyoRM7jTwWoEpmcZ8DqCpX2SCF2MuIAO_7cruNhGTTiyy1i_TYQOpyUljLDdaWIRwkhLcaTtBd1xt4qAVIyavmhLj6mPdhbQ2cM1Nqk0gECMN8FITMJBx5gx5iISTWynGZf8A4YpGUh3PfwL5I7SHSFveINcvuECOYqo1I",
               }}
               className="w-full aspect-square rounded-xl mb-4"
+              alt="Yoga Retreat achievement"
             />
             <Text
               className="text-base font-medium mb-1"

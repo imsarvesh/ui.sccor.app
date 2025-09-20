@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import { Box, HStack, Pressable, Text, VStack } from "@/components/ui";
 import React, { useState } from "react";
 import { ScrollView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../../components/ui";
 import Commentary from "./Commentary";
 
 type TabType = "scoreboard" | "commentary" | "summary";

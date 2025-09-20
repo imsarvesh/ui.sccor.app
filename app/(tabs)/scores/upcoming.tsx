@@ -8,7 +8,7 @@ import { Fonts } from "@/constants/Fonts";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import React from "react";
 import { ScrollView, StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../../components/ui";
 
 interface UpcomingMatchProps {
   title: string;
@@ -51,6 +51,7 @@ const UpcomingMatch: React.FC<UpcomingMatchProps> = ({
           source={{ uri: imageUrl }}
           style={styles.upcomingMatchImage}
           resizeMode="cover"
+          alt={`${title} match image`}
         />
       </HStack>
     </Box>

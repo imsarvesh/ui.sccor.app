@@ -77,6 +77,7 @@ const CommentItem: React.FC<CommentItemProps> = ({ comment, onLikePress }) => {
       <Image
         source={{ uri: comment.user.image }}
         style={styles.commentUserImage}
+        alt={`${comment.user.name} profile picture`}
       />
       <View style={styles.commentContent}>
         <View style={styles.commentHeader}>

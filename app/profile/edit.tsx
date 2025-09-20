@@ -16,7 +16,7 @@ import {
   View,
 } from "react-native";
 import AvatarModal from "./avatar";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../components/ui";
 
 export default function EditProfileScreen() {
   const { me } = useStore();
@@ -99,6 +99,7 @@ export default function EditProfileScreen() {
                 uri: formData.image,
               }}
               style={styles.profilePhoto}
+              alt="Profile photo"
             />
             <TouchableOpacity
               style={styles.changePhotoButton}

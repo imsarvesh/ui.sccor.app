@@ -1,7 +1,7 @@
 import { CommentList, Header, PostItem } from "@/components";
 import { Reply } from "@/graphql/types/graphql";
 import React, { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../components/ui";
 
 const mockComments: Reply[] = [
   {

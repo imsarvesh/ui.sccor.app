@@ -68,6 +68,7 @@ const PostCreation: React.FC<PostCreationProps> = ({
           source={{
             uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuC5SVfBpkTZvGqfzCX5jLR-8AzIHHyJ-jlC_QAjH9X8SEh7hNr8J90I84zanbPOaUiJ2yEeKb2El1LE-dof_o8cD2RqgL_zFbrdJjG5Q9w2vxWZ-c0cJSQMPfsm85-dbLDpi-ta1hqodXcN63ORthGfKzNV54D1K95HRWKZvTIH534PxHwHiz1SB-PCDnRihdsmPXVzEA_3P2iF8C0zWJKBckNax9dMt63beI6OwjAVhwzVgk-9DDdtT8rWOz6a23p-2tOoWLtbOTZc",
           }}
+          alt="User profile picture"
           className="w-10 h-10 rounded-full mr-3"
         />
         <View className="flex-1">

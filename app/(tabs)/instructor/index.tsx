@@ -8,7 +8,7 @@ import { useRouter } from "expo-router";
 import React from "react";
 
 import { Image, ScrollView, TouchableOpacity, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../../components/ui";
 
 interface Instructor {
   id: string;
@@ -83,6 +83,7 @@ export default function InstructorScreen() {
       <Image
         source={{ uri: instructor.imageUrl }}
         className="w-full aspect-square rounded-xl mb-4"
+        alt={`${instructor.name} instructor profile`}
       />
       <ThemedText
         style={{ color: colors.primaryText }}
@@ -102,6 +103,7 @@ export default function InstructorScreen() {
       <Image
         source={{ uri: instructor.imageUrl }}
         className="w-14 h-14 rounded-full mr-4"
+        alt={`${instructor.name} profile picture`}
       />
       <View className="flex-1">
         <ThemedText

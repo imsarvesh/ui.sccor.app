@@ -5,7 +5,7 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import React from "react";
 import { Image, ScrollView, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../../components/ui";
 
 export default function ExploreScreen() {
   const colorScheme = useColorScheme();
@@ -164,6 +164,7 @@ export default function ExploreScreen() {
                     source={{ uri: activity.image }}
                     className="w-full aspect-square rounded-xl"
                     resizeMode="cover"
+                    alt={`${activity.title} activity`}
                   />
                   <View>
                     <ThemedText
@@ -203,6 +204,7 @@ export default function ExploreScreen() {
                     source={{ uri: athlete.image }}
                     className="w-full aspect-square rounded-full"
                     resizeMode="cover"
+                    alt={`${athlete.name} profile picture`}
                   />
                   <View className="items-center">
                     <ThemedText
@@ -239,6 +241,7 @@ export default function ExploreScreen() {
                     source={{ uri: group.image }}
                     className="w-full aspect-square rounded-xl"
                     resizeMode="cover"
+                    alt={`${group.name} group`}
                   />
                   <View>
                     <ThemedText
@@ -290,6 +293,7 @@ export default function ExploreScreen() {
                   source={{ uri: content.image }}
                   className="w-full aspect-video rounded-xl flex-1"
                   resizeMode="cover"
+                  alt={`${content.title} content`}
                 />
               </View>
             </View>

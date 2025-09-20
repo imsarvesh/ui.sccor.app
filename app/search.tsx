@@ -17,7 +17,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../components/ui";
 import { Box, Pressable } from "../components/ui";
 
 export type SearchResultType = { search: SearchResultsPage };
@@ -119,6 +119,7 @@ const SearchScreen = () => {
                 uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuAPQG8ZqSZS7Y0Ql-mYYZaWfYSQ25Dqx9w_hNeZHwysIlZ8OXDvBWujKKWSR6yzTWZPQ1SSA9I9gW7_s_mjOwJQBwSHQb7AKSquoCVgWpQi9YX7y2HpxlDiFvohFjhCVoFTxIS-ICBw-SP-dGW-qnZmWSkKComob6rUNteI4lYEMp9j0hqcYtTMZ_KYnBx2oyOOJF2X7eAywAMqtlZqDE-nEaAoOGf2VTXlXB1flbxWEY7RwigxPmHBash322Ugh4ISHo4Lw2QWogc",
               }}
               style={styles.userAvatar}
+              alt="User profile picture"
             />
             <View style={styles.userInfo}>
               <Text style={[styles.userName, { color: colors.primaryText }]}>

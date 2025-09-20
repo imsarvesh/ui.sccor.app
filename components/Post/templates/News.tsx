@@ -81,6 +81,7 @@ const News = () => {
             height: 96,
             borderRadius: 8,
           }}
+          alt="News post image"
         />
       </TouchableOpacity>
     </View>

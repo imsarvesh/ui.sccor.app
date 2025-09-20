@@ -7,7 +7,7 @@ import useAuth from "@/service/hooks/useAuth";
 import { useRouter } from "expo-router";
 import React from "react";
 import { Alert, ScrollView, StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView } from "../components/ui";
 
 export default function RegisterScreen() {
   const { logout, session } = useAuth({});
