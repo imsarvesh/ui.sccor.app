@@ -38,7 +38,7 @@ export default function ScoresScreen() {
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor }]}>
-      <Header title="Match" isBack={false} />
+      {/* <Header title="Match" isBack={false} /> */}
       <Box style={[styles.container, { backgroundColor }]}>
         {/* {!isEmpty(categories) ? (
           <Tabs

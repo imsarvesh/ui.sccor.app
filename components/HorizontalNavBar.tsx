@@ -98,7 +98,7 @@ export const HorizontalNavBar: React.FC<HorizontalNavBarProps> = ({
   };
 
   return (
-    <Box style={[styles.navBar, { backgroundColor }]}>
+    <Box style={[styles.navBar, {}]}>
       <HStack
         style={styles.navBarContent}
         className="items-center justify-between px-4"
@@ -223,7 +223,6 @@ const styles = StyleSheet.create({
   navBar: {
     height: 60,
     marginHorizontal: 16,
-    marginVertical: 8,
     borderRadius: 30,
     justifyContent: "center",
   },
