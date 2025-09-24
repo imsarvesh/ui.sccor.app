@@ -1,7 +1,9 @@
-import { Icon } from "@/components/ui";
+import { AddIcon, ArrowRightIcon, PaperclipIcon } from "@/components/ui/icon";
+
 import React from "react";
 import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 import { Fonts } from "../constants/Fonts";
+import { HStack } from "./ui";
 
 interface ChatInputProps {
   value: string;
@@ -69,35 +71,44 @@ export const ChatInput: React.FC<ChatInputProps> = ({
     actionButton: {
       padding: 6,
     },
+    sendButton: {
+      padding: 6,
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    emojiButton: {
+      padding: 6,
+    },
   });
 
   return (
     <View style={styles.inputContainer}>
       <View style={styles.inputWrapper}>
-        <View style={styles.inputInner}>
-          <TextInput
-            style={styles.textInput}
-            placeholder={placeholder}
-            placeholderTextColor={colors.placeholder}
-            value={value}
-            onChangeText={onChangeText}
-            multiline
-          />
-          <View style={styles.inputActions}>
-            <View style={styles.actionButtons}>
-              <TouchableOpacity style={styles.actionButton}>
-                <Icon
-                  name="camera-alt"
-                  size={20}
-                  color={colors.secondaryText}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.actionButton}>
-                <Icon name="image" size={20} color={colors.secondaryText} />
-              </TouchableOpacity>
+        <HStack>
+          <View style={styles.inputInner}>
+            <TextInput
+              style={styles.textInput}
+              placeholder={placeholder}
+              placeholderTextColor={colors.placeholder}
+              value={value}
+              onChangeText={onChangeText}
+              multiline
+            />
+            <View style={styles.inputActions}>
+              <View style={styles.actionButtons}>
+                <TouchableOpacity style={styles.actionButton}>
+                  <AddIcon size="sm" color={colors.secondaryText} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.actionButton}>
+                  <PaperclipIcon size="sm" color={colors.secondaryText} />
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
-        </View>
+          <TouchableOpacity style={styles.sendButton} onPress={onSend}>
+            <ArrowRightIcon size="md" color={colors.secondaryText} />
+          </TouchableOpacity>
+        </HStack>
       </View>
     </View>
   );

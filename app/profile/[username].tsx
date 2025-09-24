@@ -19,7 +19,6 @@ import { SafeAreaView } from "../../components/ui";
 export default function ProfileScreen() {
   const { username }: { username: string } = useLocalSearchParams();
 
-  console.log(username);
   const { isLoading, profile: otherProfile } = useProfile(username);
   const { me } = useStore();
   const isSelf = me?.username === otherProfile?.username;

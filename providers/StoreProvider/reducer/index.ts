@@ -1,4 +1,5 @@
 import { AppState } from "../initialState";
+import { ActionType } from "./ActionType";
 import actions from "./reducerAction";
 
 const defaultAction = () => {
@@ -7,7 +8,7 @@ const defaultAction = () => {
 
 const reducerAction = (
   state: AppState,
-  action: { type: string; payload: any }
+  action: { type: ActionType; payload: any }
 ) => {
   const fn = actions(state)[action.type] || defaultAction;
   return fn(action);

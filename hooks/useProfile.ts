@@ -6,6 +6,7 @@ import GET_FOLLOWERS_BY_USERNAME from "@/service/query/getFollowersByUsername";
 import GET_FOLLOWING_BY_USERNAME from "@/service/query/getFollowingByUsername";
 import GET_MY_PROFILE from "@/service/query/getMyProfile";
 import GET_PROFILE_BY_USERNAME from "@/service/query/getProfileByUsername";
+import GET_PROFILE_BY_USER_ID from "@/service/query/getProfileByUserId";
 
 import { OtherProfile } from "@/graphql/types/graphql";
 import { useMutation, useQuery } from "@apollo/client/react";
@@ -73,6 +74,33 @@ const useProfile = (username: string) => {
     fetchPolicy: "no-cache",
     variables: {
       username,
+    },
+  });
+
+  const profile = (data as any)?.profile as OtherProfile;
+
+  useEffect(() => {
+    if (profile) {
+      dispatch({
+        type: "updateUserProfile",
+        payload: profile,
+      });
+    }
+  }, [profile, dispatch]);
+
+  return {
+    isLoading,
+    profile,
+  };
+};
+
+export const useProfileByUserId = (userId: string) => {
+  const dispatch = useDispatch();
+
+  const { loading: isLoading, data } = useQuery(GET_PROFILE_BY_USER_ID, {
+    fetchPolicy: "no-cache",
+    variables: {
+      userId,
     },
   });
 

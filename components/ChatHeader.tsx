@@ -1,4 +1,4 @@
-import { Icon, IconName } from "@/components/ui";
+import { IconSymbol } from "@/components/ui/IconSymbol";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Fonts } from "../constants/Fonts";
@@ -7,7 +7,7 @@ interface ChatHeaderProps {
   title: string;
   onBack?: () => void;
   rightAction?: {
-    icon: IconName;
+    icon: string;
     onPress: () => void;
   };
   colors: {
@@ -59,7 +59,7 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
     <View style={styles.header}>
       {onBack && (
         <TouchableOpacity style={styles.backButton} onPress={onBack}>
-          <Icon name="arrow-back" size={24} color={colors.primaryText} />
+          <IconSymbol name="arrow.left" size={24} color={colors.primaryText} />
         </TouchableOpacity>
       )}
       <Text style={styles.title}>{title}</Text>
@@ -68,7 +68,11 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
           style={styles.rightButton}
           onPress={rightAction.onPress}
         >
-          <Icon name={rightAction.icon} size={20} color={colors.primaryText} />
+          <IconSymbol
+            name={rightAction.icon}
+            size={20}
+            color={colors.primaryText}
+          />
         </TouchableOpacity>
       )}
     </View>

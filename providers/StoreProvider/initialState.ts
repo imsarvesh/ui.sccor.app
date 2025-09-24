@@ -1,3 +1,5 @@
+import { MessagesPage } from "@/graphql/types/graphql";
+
 const initialState = {
   isOnline: false,
   session: null,
@@ -12,6 +14,11 @@ const initialState = {
     nextToken: null,
     posts: [],
   },
+  listConversations: {
+    nextToken: null,
+    conversations: new Map(),
+  },
+  directMessages: new Map<string, MessagesPage>(),
 };
 
 export default initialState;

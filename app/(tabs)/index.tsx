@@ -5,13 +5,19 @@ import Sidebar from "@/components/Sidebar";
 import StoriesList from "@/components/StoriesList";
 import SuggestedUsers from "@/components/SuggestedUsers";
 import Timeline, { TimelineRef } from "@/components/Timeline";
-import { VStack } from "@/components/ui";
+import { Text, VStack } from "@/components/ui";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { useCallback, useRef, useState } from "react";
-import { RefreshControl, ScrollView, StyleSheet } from "react-native";
+import {
+  Button,
+  RefreshControl,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 import { SafeAreaView } from "../../components/ui";
 
 const HomePage = () => {
@@ -193,6 +199,16 @@ const HomePage = () => {
         <RecordButton onPress={() => router.push("/activity")} />
 
         <SuggestedUsers users={suggestedUsers} />
+
+        {/* add button to message users */}
+        <TouchableOpacity
+          onPress={() =>
+            router.push("/messages/0f997c75-396f-4f5d-af52-c48962157c35")
+          }
+          className="bg-primary-500 rounded-2xl px-4 py-2.5 flex-row items-center gap-2 w-auto"
+        >
+          <Text className="text-gray-50 text-sm font-bold">Messages</Text>
+        </TouchableOpacity>
 
         {/* Posts */}
         <VStack style={styles.postsContainer}>

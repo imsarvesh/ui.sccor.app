@@ -300,10 +300,8 @@ export type Query = {
   getTimeline: PostsPage;
   getUsersWhoLikedPost: ProfilesPage;
   listConversations: ConversationsPage;
-  matchById?: Maybe<Post>;
   schedule: PostsPage;
   search: SearchResultsPage;
-  tournamentById?: Maybe<Post>;
 };
 
 
@@ -417,11 +415,6 @@ export type QueryListConversationsArgs = {
 };
 
 
-export type QueryMatchByIdArgs = {
-  id: Scalars['String']['input'];
-};
-
-
 export type QueryScheduleArgs = {
   input?: InputMaybe<ScheduleInput>;
   limit?: InputMaybe<Scalars['Int']['input']>;
@@ -433,11 +426,6 @@ export type QuerySearchArgs = {
   input: SearchInput;
   limit?: InputMaybe<Scalars['Int']['input']>;
   nextToken?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-export type QueryTournamentByIdArgs = {
-  id: Scalars['String']['input'];
 };
 
 export type Reply = IPost & {

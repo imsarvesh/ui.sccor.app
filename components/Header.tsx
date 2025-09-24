@@ -1,7 +1,7 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
-import React from "react";
+import React, { ReactNode } from "react";
 import { TouchableOpacity, View } from "react-native";
 import { ThemedText } from "./ThemedText";
 

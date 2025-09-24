@@ -26,12 +26,8 @@ export default function MatchDetailsScreen() {
   const { matchId } = useLocalSearchParams();
   const [activeTab, setActiveTab] = useState<TabType>("scoreboard");
 
-  console.log({ matchId });
-
   const { loading, data } = usePostById(matchId as string);
   const match = data?.post.data as Match;
-
-  console.log({ match });
 
   if (loading) {
     return <ActivityIndicator />;
