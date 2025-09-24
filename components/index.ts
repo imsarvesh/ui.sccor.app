@@ -36,3 +36,8 @@ export { SearchBar } from "./SearchBar";
 
 // Workout components
 export { WeeklyTick } from "./WeeklyTick";
+
+// Scores components
+export { HorizontalNavBar } from "./HorizontalNavBar";
+export { CalendarModal } from "./CalendarModal";
+export { MatchCard } from "./MatchCard";

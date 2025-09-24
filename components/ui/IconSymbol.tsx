@@ -27,6 +27,7 @@ const MAPPING = {
   "house.fill": "home",
   "paperplane.fill": "send",
   "chevron.left.forwardslash.chevron.right": "code",
+  "chevron.left": "chevron-left",
   "chevron.right": "chevron-right",
   // Chat and Messages icons
   "arrow.left": "arrow-back",
@@ -41,6 +42,12 @@ const MAPPING = {
   "chart.bar.fill": "bar-chart",
   // Calendar icon
   "calendar.days": "event",
+  // Sports icons
+  sportscourt: "sports-cricket",
+  soccerball: "sports-soccer",
+  tennisball: "sports-tennis",
+  "chevron.up": "keyboard-arrow-up",
+  "chevron.down": "keyboard-arrow-down",
 } as IconMapping;
 
 /**
