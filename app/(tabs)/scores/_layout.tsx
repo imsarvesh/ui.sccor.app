@@ -15,7 +15,7 @@ export default function InstructorLayout() {
         }}
       />
       <Stack.Screen
-        name="details"
+        name="[matchId]"
         options={{
           title: "Score Details",
         }}

@@ -200,16 +200,6 @@ const HomePage = () => {
 
         <SuggestedUsers users={suggestedUsers} />
 
-        {/* add button to message users */}
-        <TouchableOpacity
-          onPress={() =>
-            router.push("/messages/0f997c75-396f-4f5d-af52-c48962157c35")
-          }
-          className="bg-primary-500 rounded-2xl px-4 py-2.5 flex-row items-center gap-2 w-auto"
-        >
-          <Text className="text-gray-50 text-sm font-bold">Messages</Text>
-        </TouchableOpacity>
-
         {/* Posts */}
         <VStack style={styles.postsContainer}>
           <Timeline ref={timelineRef} />

@@ -27,6 +27,7 @@ export default function MatchDetailsScreen() {
   const [activeTab, setActiveTab] = useState<TabType>("scoreboard");
 
   const { loading, data } = usePostById(matchId as string);
+  // @ts-ignore
   const match = data?.post.data as Match;
 
   if (loading) {
