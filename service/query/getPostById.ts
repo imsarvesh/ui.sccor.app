@@ -22,6 +22,28 @@ const getPostById = gql`
           publishedAt
           link
         }
+        ... on Match {
+          id
+          name
+          sportType
+          venue
+          source
+          startAt
+          sourceId
+          status
+          isLive
+          completed
+          sourceUrl
+          teams {
+            teamName
+            teamSName
+            teamId
+          }
+          tournament {
+            id
+            name
+          }
+        }
       }
     }
   }

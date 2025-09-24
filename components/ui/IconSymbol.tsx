@@ -39,6 +39,8 @@ const MAPPING = {
   globe: "public",
   "person.2.fill": "people",
   "chart.bar.fill": "bar-chart",
+  // Calendar icon
+  "calendar.days": "event",
 } as IconMapping;
 
 /**

@@ -67,7 +67,6 @@ const useAuth = ({ onCompleted, onError }: AuthProps) => {
 
   const onSuccess = useCallback(async ({ data }) => {
     if (data) {
-      console.log("onSuccess", data);
       await AsyncStorage.setItem(config.SESSION_KEY, JSON.stringify(data));
       const sessionWithProfile = await getSessionWithProfile(data);
       await new Promise((resolve) => {

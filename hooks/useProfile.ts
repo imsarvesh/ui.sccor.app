@@ -122,7 +122,6 @@ export const useFollowersList = ({ username }) => {
 };
 
 export const useFollowingList = ({ username }) => {
-  console.log(username);
   const [profiles, setProfiles] = useState([]);
   const nextTokenRef = useRef<string>("");
   const { loading: isLoading, data: following } = useQuery(

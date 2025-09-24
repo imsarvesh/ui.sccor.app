@@ -161,10 +161,7 @@ const Sidebar: React.FC<SidebarProps> = ({ visible, onClose }) => {
       icon: "person-outline",
       title: "Profile",
       onPress: () => {
-        logout().then(() => {
-          onClose();
-          router.push(`/profile/${me?.username}`);
-        });
+        router.push(`/profile/${me?.username}`);
       },
     },
     {

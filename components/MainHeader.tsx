@@ -25,7 +25,6 @@ const Header: React.FC<HeaderProps> = ({
   const router = useRouter();
   const store = useStore();
   const me = store?.me;
-  console.log(me);
   const profileImage = me?.image ? { uri: me?.image } : config.defaultAvatar;
   const backgroundColor = useThemeColor({}, "background");
   const textColor = useThemeColor({}, "text");

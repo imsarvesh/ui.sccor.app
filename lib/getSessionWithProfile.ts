@@ -13,7 +13,6 @@ const getSessionWithProfile = async (data?: string) => {
     (await AsyncStorage.getItem(config.SESSION_KEY).then((data) =>
       JSON.parse(data)
     ));
-  console.log("session", session);
   if (!session) return { session: null, me: null, isLoggedIn: false };
   session = await refreshToken(session.refreshToken);
 
@@ -54,7 +53,6 @@ export const refreshToken = async (oldRefreshToken: string) => {
     const session = await response.json();
     const { accessToken, refreshToken } = session;
     if (accessToken && refreshToken) {
-      console.log("refreshToken", session);
       await AsyncStorage.setItem(config.SESSION_KEY, JSON.stringify(session));
       return session;
     }

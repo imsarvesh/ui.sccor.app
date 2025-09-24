@@ -149,8 +149,8 @@ const useComments = (postId: string, onCompleted: any) => {
   };
 };
 
-const usePostById = (postId: string) => {
-  return useQuery(getPostById, {
+const usePostById = (postId: string): { loading: boolean; data: Post } => {
+  return useQuery<Post>(getPostById, {
     variables: { postId },
   });
 };

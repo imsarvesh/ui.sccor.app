@@ -27,7 +27,7 @@ const Header = ({
       >
         <Ionicons name="chevron-back" size={24} color={iconColor} />
       </TouchableOpacity>
-      <ThemedText className="text-lg font-bold leading-tight flex-1 text-center">
+      <ThemedText className="text-lg font-bold leading-tight flex-1 text-center line-clamp-1">
         {title}
       </ThemedText>
 
