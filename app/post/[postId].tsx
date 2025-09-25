@@ -1,12 +1,13 @@
+import PostItem from "@/components/Post";
 import { CommentList, Header } from "@/components";
 import { Comment } from "@/components/types";
 import React, { useState } from "react";
-import { SafeAreaView } from "../../components/ui";
 import { usePostById } from "@/service/hooks/usePost";
 import { useLocalSearchParams } from "expo-router";
 import { ActivityIndicator, Text } from "react-native";
-import PostItem from "@/components/Post";
 import { useThemeColor } from "@/hooks/useThemeColor";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Post } from "@/graphql/types/graphql";
 
 const mockComments: Comment[] = [
   {
@@ -75,14 +76,10 @@ const PostComponent = () => {
   const tintColor = useThemeColor({}, "tint");
 
   if (loading) {
-    return (
-      <SafeAreaView className="flex-1" style={{ backgroundColor }}>
-        <ActivityIndicator color={tintColor} size="large" />
-      </SafeAreaView>
-    );
+    return <ActivityIndicator color={tintColor} size="large" />;
   }
 
-  console.log(data);
+  const post = data.post as Post;
 
   const handleLikeComment = (commentId: string | number) => {
     setComments(
@@ -94,33 +91,10 @@ const PostComponent = () => {
     );
   };
 
-  // Map GraphQL Post to PostItemProps format
-  const mappedPost = data
-    ? {
-        id: parseInt(data.id),
-        user: {
-          name: data.profile?.name || "Unknown User",
-          image: data.profile?.image || "",
-          timeAgo: "1d", // You might want to calculate this from createdAt
-        },
-        content:
-          data.data?.__typename === "News" ? (data.data as any).text || "" : "",
-        likes: data.likes,
-        comments: data.repliesCount,
-        type: data.data?.__typename?.toLowerCase() || "post",
-        image: data.media?.[0]?.fileUrl,
-        scoreboard: undefined, // Add scoreboard mapping if needed
-      }
-    : null;
-
   return (
     <SafeAreaView className="flex-1" style={{ backgroundColor }}>
-      <Header
-        title={data.post.data?.__typename}
-        isBack={true}
-        isSearch={false}
-      />
-      {mappedPost && <PostItem post={mappedPost} />}
+      <Header title={post.data?.__typename} isBack={true} isSearch={false} />
+      <PostItem key={post.id} post={post} />;
       <CommentList comments={comments} onLikeComment={handleLikeComment} />
     </SafeAreaView>
   );
