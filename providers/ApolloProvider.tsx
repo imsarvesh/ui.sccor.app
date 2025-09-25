@@ -6,6 +6,7 @@ import apolloClient from "../lib/apolloClient";
 type ProviderPropType = { children: ReactNode; token: string };
 
 function Layout({ children, token }: ProviderPropType) {
+  console.log("token", token);
   const route = useRouter();
   const client = apolloClient(token, (message) => {
     if (message === "Unauthorized") route.push("/login");

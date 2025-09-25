@@ -5,6 +5,7 @@ import { StoreProvider } from "../providers/StoreProvider/useStore";
 import ApolloProvider from "./ApolloProvider";
 import initialState from "./StoreProvider/initialState";
 import { Slot } from "expo-router";
+import AuthProvider from "./AuthProvider";
 
 type ProviderPropType = {
   children: ReactNode;
@@ -19,11 +20,9 @@ const Providers = ({ children, userData }: ProviderPropType) => {
   const { me, session, isLoggedIn } = userData;
   return (
     <StoreProvider initialData={{ ...initialState, session, me, isLoggedIn }}>
-      <ApolloProvider token={session?.accessToken}>
-        {/* <GestureHandlerRootView> */}
+      <AuthProvider>
         <Slot />
-        {/* </GestureHandlerRootView> */}
-      </ApolloProvider>
+      </AuthProvider>
     </StoreProvider>
   );
 };
