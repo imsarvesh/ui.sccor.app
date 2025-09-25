@@ -93,7 +93,11 @@ const PostComponent = () => {
 
   return (
     <SafeAreaView className="flex-1" style={{ backgroundColor }}>
-      <Header title={post.data?.__typename} isBack={true} isSearch={false} />
+      <Header
+        title={post.data?.__typename || "Loading..."}
+        isBack={true}
+        isSearch={false}
+      />
       <PostItem key={post.id} post={post} />;
       <CommentList comments={comments} onLikeComment={handleLikeComment} />
     </SafeAreaView>

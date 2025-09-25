@@ -6,40 +6,14 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import PostComponent from "./Post";
 import PostActions from "./PostActions";
+import { Post } from "@/graphql/types/graphql";
 
-interface User {
-  name: string;
-  image: string;
-  timeAgo: string;
-}
-
-interface ScoreboardData {
-  player1: { name: string; scores: number[] };
-  player2: { name: string; scores: number[] };
-}
-
-interface PostItemProps {
-  id: number;
-  user: User;
-  content: string;
-  likes: number;
-  comments: number;
-  type: string;
-  image?: string;
-  scoreboard?: ScoreboardData;
-}
-
-const Post = ({ post }: { post: PostItemProps }) => {
+const PostItem = ({ post }: { post: Post }) => {
   const textColor = useThemeColor({}, "text");
   const secondaryTextColor = useThemeColor(
     { light: "#9c4949", dark: "#a0a0a0" },
     "text"
   );
-  const cardBackground = useThemeColor(
-    { light: "#fcf8f8", dark: "#1a1a1a" },
-    "background"
-  );
-  const shadowColor = useThemeColor({ light: "#000", dark: "#000" }, "text");
 
   const styles = StyleSheet.create({
     post: {
@@ -106,4 +80,4 @@ const Post = ({ post }: { post: PostItemProps }) => {
   );
 };
 
-export default Post;
+export default PostItem;
