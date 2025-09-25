@@ -4,15 +4,16 @@ import { Platform, View } from "react-native";
 
 import { HapticTab } from "@/components/HapticTab";
 import { IconSymbol } from "@/components/ui/IconSymbol";
-import TabBarBackground from "@/components/ui/TabBarBackground";
+import GlassTabBarBackground from "@/components/ui/GlassTabBarBackground";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { useThemeColor } from "@/hooks/useThemeColor";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
-  const activeTintColor = colorScheme === "dark" ? "#ffffff" : "#4c0303"; // White in dark theme, black in light theme
-  const inactiveTintColor = useThemeColor({}, "secondaryText");
+  const activeTintColor = colorScheme === "dark" ? "#ffffff" : "#0066FF"; // White in dark theme, blue in light theme
+  const inactiveTintColor =
+    colorScheme === "dark" ? "rgba(255, 255, 255, 0.6)" : "rgba(0, 0, 0, 0.6)"; // Semi-transparent for glass effect
   const tabBarBackgroundColor = useThemeColor({}, "backgroundPrimary");
 
   return (
@@ -22,15 +23,35 @@ export default function TabLayout() {
         tabBarInactiveTintColor: inactiveTintColor,
         headerShown: false,
         tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
+        tabBarBackground: GlassTabBarBackground,
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: "500",
+          marginTop: 4,
+        },
+        tabBarIconStyle: {
+          marginTop: 4,
+        },
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
+            // Glass morphism effect for iOS
             position: "absolute",
-            backgroundColor: tabBarBackgroundColor,
+            backgroundColor: "transparent",
+            borderTopWidth: 0,
+            elevation: 0,
+            shadowOpacity: 0,
+            height: 90, // Slightly taller for better visual balance
+            paddingBottom: 34, // Account for safe area
+            paddingTop: 8,
           },
           default: {
-            backgroundColor: tabBarBackgroundColor,
+            // Semi-transparent background for Android/Web
+            backgroundColor: `${tabBarBackgroundColor}E6`, // 90% opacity
+            borderTopWidth: 0.5,
+            borderTopColor: "rgba(255, 255, 255, 0.1)",
+            elevation: 0,
+            shadowOpacity: 0,
+            height: 70,
           },
         }),
       }}
