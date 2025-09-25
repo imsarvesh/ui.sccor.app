@@ -1,11 +1,10 @@
 import { ReactNode } from "react";
 
 // import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { StoreProvider } from "../providers/StoreProvider/useStore";
-import ApolloProvider from "./ApolloProvider";
-import initialState from "./StoreProvider/initialState";
 import { Slot } from "expo-router";
+import { StoreProvider } from "../providers/StoreProvider/useStore";
 import AuthProvider from "./AuthProvider";
+import initialState from "./StoreProvider/initialState";
 
 type ProviderPropType = {
   children: ReactNode;
@@ -16,7 +15,7 @@ type ProviderPropType = {
   };
 };
 
-const Providers = ({ children, userData }: ProviderPropType) => {
+const Providers = ({ userData }: ProviderPropType) => {
   const { me, session, isLoggedIn } = userData;
   return (
     <StoreProvider initialData={{ ...initialState, session, me, isLoggedIn }}>
