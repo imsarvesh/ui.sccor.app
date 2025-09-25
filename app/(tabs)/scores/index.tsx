@@ -1,4 +1,4 @@
-import { Header, HorizontalNavBar, MatchCard } from "@/components";
+import { HorizontalNavBar, MatchCard } from "@/components";
 import { Box } from "@/components/ui/box";
 import { HStack } from "@/components/ui/hstack";
 import { IconSymbol } from "@/components/ui/IconSymbol";
@@ -6,17 +6,14 @@ import { Pressable } from "@/components/ui/pressable";
 import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
 import { Fonts } from "@/constants/Fonts";
+import { Match, Post } from "@/graphql/types/graphql";
 import { useThemeColor } from "@/hooks/useThemeColor";
+import useRecentMatch from "@/service/hooks/useRecentMatch";
+import { timeAgo } from "@/service/utils/timeAgo";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { ActivityIndicator, ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView } from "../../../components/ui";
-import useRecentMatch, {
-  IRecentMatchBySportType,
-} from "@/service/hooks/useRecentMatch";
-import { isEmpty } from "lodash";
-import { Match, Post } from "@/graphql/types/graphql";
-import { timeAgo } from "@/service/utils/timeAgo";
 
 export default function ScoresScreen() {
   const backgroundColor = useThemeColor({}, "backgroundPrimary");

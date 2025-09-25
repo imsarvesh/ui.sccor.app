@@ -1,6 +1,7 @@
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { useAddPost } from "@/service/hooks/usePost";
 import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import {
   Alert,
@@ -10,6 +11,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import VisibilityDropdown, { VisibilityOption } from "./VisibilityDropdown";
+import { useStore } from "@/providers";
 
 interface PostCreationProps {
   postText: string;
@@ -28,12 +31,13 @@ const PostCreation: React.FC<PostCreationProps> = ({
   const muted = useThemeColor({}, "placeholder");
   const icon = useThemeColor({}, "icon");
   const accent = useThemeColor({}, "tabIconSelected");
+  const { me } = useStore();
 
   const { addPost, response } = useAddPost();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [visibility, setVisibility] = useState<VisibilityOption>("Public");
 
   const handleSubmitPost = async () => {
-    console.log("handleSubmitPost", postText);
     if (!postText.trim()) {
       Alert.alert("Error", "Please enter some text for your post");
       return;
@@ -41,9 +45,10 @@ const PostCreation: React.FC<PostCreationProps> = ({
 
     setIsSubmitting(true);
     try {
-      await addPost(postText.trim());
+      await addPost(postText.trim(), undefined, visibility);
       onPostTextChange(""); // Clear the input
       onPostCreated?.(); // Call the callback if provided
+      router.push("/");
     } catch (error) {
       console.error("Error creating post:", error);
       Alert.alert("Error", "Failed to create post. Please try again.");
@@ -66,7 +71,7 @@ const PostCreation: React.FC<PostCreationProps> = ({
       >
         <Image
           source={{
-            uri: "https://lh3.googleusercontent.com/aida-public/AB6AXuC5SVfBpkTZvGqfzCX5jLR-8AzIHHyJ-jlC_QAjH9X8SEh7hNr8J90I84zanbPOaUiJ2yEeKb2El1LE-dof_o8cD2RqgL_zFbrdJjG5Q9w2vxWZ-c0cJSQMPfsm85-dbLDpi-ta1hqodXcN63ORthGfKzNV54D1K95HRWKZvTIH534PxHwHiz1SB-PCDnRihdsmPXVzEA_3P2iF8C0zWJKBckNax9dMt63beI6OwjAVhwzVgk-9DDdtT8rWOz6a23p-2tOoWLtbOTZc",
+            uri: me?.image,
           }}
           alt="User profile picture"
           className="w-10 h-10 rounded-full mr-3"
@@ -82,28 +87,17 @@ const PostCreation: React.FC<PostCreationProps> = ({
             onChangeText={onPostTextChange}
             editable={!isSubmitting}
           />
+
           <View className="flex-row justify-between items-center mt-2">
-            <View className="flex-row">
-              <TouchableOpacity className="p-1.5 mr-1" disabled={isSubmitting}>
-                <Ionicons name="camera-outline" size={20} color={icon} />
-              </TouchableOpacity>
+            <View className="flex-row justify-center items-center gap-2">
+              {/* Visibility Dropdown */}
+              <VisibilityDropdown
+                value={visibility}
+                onValueChange={setVisibility}
+                disabled={isSubmitting}
+              />
               <TouchableOpacity className="p-1.5 mr-1" disabled={isSubmitting}>
                 <Ionicons name="image-outline" size={20} color={icon} />
-              </TouchableOpacity>
-              <TouchableOpacity className="p-1.5 mr-1" disabled={isSubmitting}>
-                <Ionicons name="videocam-outline" size={20} color={icon} />
-              </TouchableOpacity>
-              <TouchableOpacity className="p-1.5 mr-1" disabled={isSubmitting}>
-                <Ionicons name="person-add-outline" size={20} color={icon} />
-              </TouchableOpacity>
-              <TouchableOpacity className="p-1.5 mr-1" disabled={isSubmitting}>
-                <Ionicons name="location-outline" size={20} color={icon} />
-              </TouchableOpacity>
-              <TouchableOpacity className="p-1.5 mr-1" disabled={isSubmitting}>
-                <Ionicons name="happy-outline" size={20} color={icon} />
-              </TouchableOpacity>
-              <TouchableOpacity className="p-1.5 mr-1" disabled={isSubmitting}>
-                <Ionicons name="calendar-outline" size={20} color={icon} />
               </TouchableOpacity>
             </View>
             <TouchableOpacity

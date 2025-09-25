@@ -26,6 +26,7 @@ export { ThemedTextInput } from "./ThemedTextInput";
 // Post components
 export { default as PostCreation } from "./PostCreation";
 export { default as SuggestedUsers } from "./SuggestedUsers";
+export { default as VisibilityDropdown } from "./VisibilityDropdown";
 
 // Chat and Messages components
 export { ChatHeader } from "./ChatHeader";

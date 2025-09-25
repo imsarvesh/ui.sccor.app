@@ -1,22 +1,11 @@
 import { useStore } from "@/providers/PostProvider";
-
-import Match from "./templates/Match";
-import News from "./templates/News";
-import Post from "./templates/Post";
-import Tournament from "./templates/Tournament";
+import * as templates from "./templates";
 
 const PostComponent = () => {
   const post = useStore();
 
-  if (String(post.type) === "Match") {
-    return <Match />;
-  } else if (String(post.type) === "News") {
-    return <News />;
-  } else if (String(post.type) === "Tournament") {
-    return <Tournament />;
-  } else {
-    return <Post />;
-  }
+  const Template = templates[post.type] || templates.Post;
+  return <Template />;
 };
 
 export default PostComponent;

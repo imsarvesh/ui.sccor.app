@@ -1,9 +1,14 @@
-import { CommentList, Header, PostItem } from "@/components";
-import { Reply } from "@/graphql/types/graphql";
+import { CommentList, Header } from "@/components";
+import { Comment } from "@/components/types";
 import React, { useState } from "react";
 import { SafeAreaView } from "../../components/ui";
+import { usePostById } from "@/service/hooks/usePost";
+import { useLocalSearchParams } from "expo-router";
+import { ActivityIndicator, Text } from "react-native";
+import PostItem from "@/components/Post";
+import { useThemeColor } from "@/hooks/useThemeColor";
 
-const mockComments: Reply[] = [
+const mockComments: Comment[] = [
   {
     id: "1",
     user: {
@@ -61,27 +66,27 @@ const mockComments: Reply[] = [
   },
 ];
 
-const Post = () => {
-  const post = {
-    id: 1,
-    user: {
-      name: "Ethan Walker",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuBlXu1dn4IN38F65vzxPDTG45ftnXxhmNpkjdJSd_OjElyCTdFyyhW_7kQcpLe2XZ7i65VUOibkr1HQCeNPDGzo12L3p6Avszg41u81mA9sfV_Hhpb-dhUmVvpmADtfqwHakrC68RrwqZeuB3xNE_QnY_N7CgN1tE4LNX0Rhd8k6Nk_CSCHesEEt7zk--jMb2kgzw_1DrHGAuLUhagKHI0AlANGok4hxLgznmDTvS0FEEYsq2-KUUi7ygUIgEbSy-vkES97bEx2QDU",
-      timeAgo: "1d",
-    },
-    content:
-      "Just hit a new personal best in the 100m sprint! Feeling faster than ever. #trackandfield #sprint",
-    likes: 23,
-    comments: 5,
-    type: "text",
-  };
+const PostComponent = () => {
+  const { postId } = useLocalSearchParams();
+  const { loading, data } = usePostById(postId as string);
+  const [comments, setComments] = useState<Comment[]>(mockComments);
 
-  const [comments, setComments] = useState<Reply[]>(mockComments);
+  const backgroundColor = useThemeColor({}, "background");
+  const tintColor = useThemeColor({}, "tint");
 
-  const handleLikeComment = (commentId: number) => {
+  if (loading) {
+    return (
+      <SafeAreaView className="flex-1" style={{ backgroundColor }}>
+        <ActivityIndicator color={tintColor} size="large" />
+      </SafeAreaView>
+    );
+  }
+
+  console.log(data);
+
+  const handleLikeComment = (commentId: string | number) => {
     setComments(
-      comments.map((comment: any) =>
+      comments.map((comment: Comment) =>
         comment.id === commentId
           ? { ...comment, likes: comment.likes + 1 }
           : comment
@@ -89,14 +94,36 @@ const Post = () => {
     );
   };
 
+  // Map GraphQL Post to PostItemProps format
+  const mappedPost = data
+    ? {
+        id: parseInt(data.id),
+        user: {
+          name: data.profile?.name || "Unknown User",
+          image: data.profile?.image || "",
+          timeAgo: "1d", // You might want to calculate this from createdAt
+        },
+        content:
+          data.data?.__typename === "News" ? (data.data as any).text || "" : "",
+        likes: data.likes,
+        comments: data.repliesCount,
+        type: data.data?.__typename?.toLowerCase() || "post",
+        image: data.media?.[0]?.fileUrl,
+        scoreboard: undefined, // Add scoreboard mapping if needed
+      }
+    : null;
+
   return (
-    <SafeAreaView className="flex-1">
-      <Header title="Post" isBack={true} isSearch={false} />
-      <PostItem post={post} />
-      {/* Comments List */}
+    <SafeAreaView className="flex-1" style={{ backgroundColor }}>
+      <Header
+        title={data.post.data?.__typename}
+        isBack={true}
+        isSearch={false}
+      />
+      {mappedPost && <PostItem post={mappedPost} />}
       <CommentList comments={comments} onLikeComment={handleLikeComment} />
     </SafeAreaView>
   );
 };
 
-export default Post;
+export default PostComponent;

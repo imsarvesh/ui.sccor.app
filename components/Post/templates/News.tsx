@@ -4,6 +4,7 @@ import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { useStore } from "@/providers/PostProvider";
+import { usePathname, useRouter } from "expo-router";
 import * as WebBrowser from "expo-web-browser";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
@@ -12,29 +13,33 @@ const News = () => {
   const colors = Colors[colorScheme ?? "dark"];
   const iconColor = useThemeColor({}, "icon");
   const { data: post } = useStore();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const openBrowser = (url: string) => {
-    WebBrowser.openBrowserAsync(url);
+    if (pathname !== `/post/${post.id}`) {
+      router.push(`/post/${post.id}`);
+    } else {
+      WebBrowser.openBrowserAsync(url);
+    }
   };
 
   return (
     <View style={styles.container}>
-      <VStack style={{ flex: 1, marginRight: 16 }}>
-        <HStack style={styles.postHeader}>
-          <Text
-            style={{
-              color: colors.secondaryText,
-              fontSize: 12,
-              fontWeight: "500",
-              textTransform: "uppercase",
-              letterSpacing: 1,
-              marginBottom: 6,
-            }}
-          >
-            {post.source}
-          </Text>
-        </HStack>
-      </VStack>
+      <HStack style={styles.postHeader}>
+        <Text
+          style={{
+            color: colors.secondaryText,
+            fontSize: 12,
+            fontWeight: "500",
+            textTransform: "uppercase",
+            letterSpacing: 1,
+            marginBottom: 6,
+          }}
+        >
+          {post.source}
+        </Text>
+      </HStack>
 
       <TouchableOpacity
         onPress={() => openBrowser(post.link)}
@@ -43,7 +48,6 @@ const News = () => {
           flexDirection: "row",
           alignItems: "flex-start",
           justifyContent: "space-between",
-          backgroundColor: colors.backgroundSecondary,
           borderRadius: 8,
           marginBottom: 16,
         }}

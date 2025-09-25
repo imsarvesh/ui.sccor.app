@@ -7,6 +7,7 @@ import { router } from "expo-router";
 import React, { useState } from "react";
 import { Alert, ScrollView, TextInput, View } from "react-native";
 import { SafeAreaView } from "../../../components/ui";
+import withLogin from "@/components/withLogin";
 
 interface ActivityItemProps {
   icon: string;
@@ -363,7 +364,7 @@ const formatActivityPost = (
   return post;
 };
 
-export default function ActivityScreen() {
+function ActivityScreen() {
   const backgroundPrimary = useThemeColor({}, "backgroundPrimary");
   const userMessage = useThemeColor({}, "userMessage");
 
@@ -501,30 +502,6 @@ export default function ActivityScreen() {
           />
 
           <PostCreation postText={postText} onPostTextChange={setPostText} />
-
-          <View className="px-4 py-3">
-            <Pressable
-              onPress={handlePostSubmit}
-              style={{
-                backgroundColor: userMessage,
-                borderRadius: 20,
-                paddingHorizontal: 16,
-                paddingVertical: 12,
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Text
-                style={{
-                  fontSize: 16,
-                  fontWeight: "bold",
-                  color: backgroundPrimary,
-                }}
-              >
-                Share Activity Post
-              </Text>
-            </Pressable>
-          </View>
         </View>
       </SafeAreaView>
     );
@@ -575,3 +552,5 @@ export default function ActivityScreen() {
     </SafeAreaView>
   );
 }
+
+export default withLogin(ActivityScreen);

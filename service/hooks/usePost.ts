@@ -12,6 +12,7 @@ import mutationReply from "../mutation/reply";
 import mutationUnLikePost from "../mutation/unlikePost";
 import getPostById from "../query/getPostById";
 import getReplyByPostId from "../query/getReplyByPostId";
+import useMustLoggedIn from "./useMustLoggedIn";
 
 // Type for the GraphQL query response
 interface GetReplyByPostIdResponse {
@@ -20,18 +21,23 @@ interface GetReplyByPostIdResponse {
 
 const useAddPost = () => {
   const [mutation, response] = useMutation(mutationAddPost);
-  const addPost = async (text: string, media?: string[]) => {
-    return mutation({ variables: { text, media } });
+  const addPost = async (
+    text: string,
+    media?: string[],
+    visibility?: string
+  ) => {
+    return mutation({ variables: { text, media, visibility } });
   };
 
   return {
-    addPost,
+    addPost: useMustLoggedIn(addPost),
     response,
   };
 };
 
 const useLikePost = ({ onCompleted, ...options }: MutationFunctionOptions) => {
   const [mutation, response] = useMutation(mutationLikePost);
+
   const like = async ({ id, likes }: Post) =>
     mutation({
       variables: { postId: id },
@@ -48,7 +54,7 @@ const useLikePost = ({ onCompleted, ...options }: MutationFunctionOptions) => {
       ...options,
     });
 
-  return { like, response };
+  return { like: useMustLoggedIn(like), response };
 };
 
 const useUnLikePost = ({
@@ -72,7 +78,7 @@ const useUnLikePost = ({
       ...options,
     });
 
-  return { unlike, response };
+  return { unlike: useMustLoggedIn(unlike), response };
 };
 
 const useReply = (postId: string) => {
@@ -82,7 +88,7 @@ const useReply = (postId: string) => {
   };
 
   return {
-    reply,
+    reply: useMustLoggedIn(reply),
     response,
   };
 };

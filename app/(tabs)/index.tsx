@@ -1,23 +1,16 @@
 import Header from "@/components/MainHeader";
-import PostItem from "@/components/PostItem";
 import RecordButton from "@/components/RecordButton";
 import Sidebar from "@/components/Sidebar";
 import StoriesList from "@/components/StoriesList";
 import SuggestedUsers from "@/components/SuggestedUsers";
 import Timeline, { TimelineRef } from "@/components/Timeline";
-import { Text, VStack } from "@/components/ui";
+import { VStack } from "@/components/ui";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { useCallback, useRef, useState } from "react";
-import {
-  Button,
-  RefreshControl,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-} from "react-native";
+import { RefreshControl, ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView } from "../../components/ui";
 
 const HomePage = () => {
@@ -67,73 +60,6 @@ const HomePage = () => {
       name: "Lucas",
       image:
         "https://lh3.googleusercontent.com/aida-public/AB6AXuDCI4-ywtgq9gRo9jZ9FcBCyfu1vij2KP2wu8sCnRWhI7jeE9fVooKxTGul6c_VEVTmVQcv2D0vw3Jym1V0t45z-48sb-pMlRDR0vmqPZMkOEqYAZPHOYyyoT4DNznQckjnDmaf6BofGxJHQ-x5T61cDQLP8qldYY_XXcZbdh0mmXH64Jz5sMj32w0HbRNqZFjB5TdlsQpVBW-LJzT5rAuPU92ILNTNrXJYIvqCYuI5pQZ0Si6oN8QGEaAlUfLwEJcEo87RjsYDK1U",
-    },
-  ];
-
-  const posts = [
-    {
-      id: 1,
-      user: {
-        name: "Ethan Walker",
-        image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuBlXu1dn4IN38F65vzxPDTG45ftnXxhmNpkjdJSd_OjElyCTdFyyhW_7kQcpLe2XZ7i65VUOibkr1HQCeNPDGzo12L3p6Avszg41u81mA9sfV_Hhpb-dhUmVvpmADtfqwHakrC68RrwqZeuB3xNE_QnY_N7CgN1tE4LNX0Rhd8k6Nk_CSCHesEEt7zk--jMb2kgzw_1DrHGAuLUhagKHI0AlANGok4hxLgznmDTvS0FEEYsq2-KUUi7ygUIgEbSy-vkES97bEx2QDU",
-        timeAgo: "1d",
-      },
-      content:
-        "Just hit a new personal best in the 100m sprint! Feeling faster than ever. #trackandfield #sprint",
-      likes: 23,
-      comments: 5,
-      type: "text",
-    },
-    {
-      id: 2,
-      user: {
-        name: "Olivia Hayes",
-        image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuBV_yB4ZmW1kJiCl9wI_uyab-0c7qze_ODBRoe-kL6I4CcXmtWjbVP7aKb678vEyO89mkdKK27oB7GFSzsn8xDkA0AbfmW1KCaIP5hGs2o-2sD1vwSA9yeC12Dz9wUlFoz7EMpvvPHauPgBQ7TgS9bRp2x_szgCBQNlqvR-P7HosDwX6T11wMZUooHC-5bqroPGjeZJY8AOrimuJd1OniKhI8mzWRlb-Qd9_ET5w88VvlYm-EV2s2DAUbqLAvjxQ0WWR8Y5Trill30",
-        timeAgo: "2d",
-      },
-      content:
-        "Nailed my first marathon! The support from the crowd was incredible. #marathon #running",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuC0drkq_gDLrwqdcGSUpHg6ENjtMvvWA-rp_eE0WFQ2fI_4vdLRJ06-EpDc_RWSpIllGllWgOc1NoixBJQISEI7FlxFtpP_M4-S27_5C7-K2_5-8YsXWyoM5toCXCYYmMw03_KGUYw08lE7skfxtJe_IZTjGl3FkuanePWKB_fTZhDVcQFR8mm7n5lvzXLdOHFK477wpkk_Jb2AnAyjMYlSYPz5xqCs5NuH3PhTZsl-7u22-7ulP-LFtpAG-EGQ99bngJ6hPqRm_v0",
-      likes: 45,
-      comments: 12,
-      type: "image",
-    },
-    {
-      id: 3,
-      user: {
-        name: "Noah Bennett",
-        image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuB-IHr2yciveVaoY3ZDAwEVAU7ZbuGwWSeGlrD4QGbaKNR2ZE71OQKbUybC2YWtx5ddeUm6kF232JDhOffmRgs13fndLy6_MTPnZ-X9NeDrI5-FlN_0wXU1jVQoflBw40igZaSXcL-4TkLEr_qdWIeq8BsnLhKwACER0HMkNcG5i0q7z6SzQHASG5wAapI6OrZjB4UUCm6gOkJ01kRRkr6kfis_tOBL1nPVsAG-kL7dHkrFQ4rZob_T6CSdW5STZeEvjcg7K5JJDjo",
-        timeAgo: "3d",
-      },
-      content:
-        "Finally mastered the backflip on my snowboard! Years of practice paid off. #snowboarding #backflip",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuD9OUP9HBs8xUHMugiijvkqJuqftugEeKSQOmQRxwDiPKtUZT2YCAzx3o2grK_8mEErSqn5dAA_JfrfVMGRcmFDNU2y-M0dWjcr9sIHVY95SFbi55jaCJsI9B5X5TtA1zA2FL-zJ2mX9bKISY3Y02HvtC-ZXqFh2TYeOgEkaZdmmERmA51oyWh3ivDkNvD-W8e6JeedCBjpWJ8vZ6R2aQvxgEocsqH69UaadOZKVqAALfvPykZ2D6sulYlxf6eYKfmlpCSKD6LqIaY",
-      likes: 38,
-      comments: 8,
-      type: "image",
-    },
-    {
-      id: 4,
-      user: {
-        name: "Sophia Mitchell",
-        image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuCWJTGXfx2wMZaTH4YjKaFXUnCIfh6qJP5gc4wqUlt0FRmMnqAOqyIneXzobDcWOa21UWjxTRUibhOhknZNI68z8lERSdcUt-evstg7ENGlLhklV9CFVaA_nfbtuKtBck5qwqqmajqCwjSRqmJO59UZ8h4TSfgCXHOYC3RSV4GxWu0rpOUx1mUkzpRulWNJzkHNcJI-_vR5Y5EdITBcnsnfCrmdQbUxJcOPmIzPcQm8mTjevcMnBYq8X8Oj4p7EksJi3Z1TmYhLGSY",
-        timeAgo: "1d",
-      },
-      content:
-        "Just won my tennis match against Amelia Carter! The final score was 6-4, 7-5. Tap on a player's name to view their profile. #tennis #match",
-      scoreboard: {
-        player1: { name: "Sophia Mitchell", scores: [6, 7] },
-        player2: { name: "Amelia Carter", scores: [4, 5] },
-      },
-      likes: 15,
-      comments: 3,
-      type: "scoreboard",
     },
   ];
 
@@ -203,10 +129,6 @@ const HomePage = () => {
         {/* Posts */}
         <VStack style={styles.postsContainer}>
           <Timeline ref={timelineRef} />
-
-          {posts.map((post) => (
-            <PostItem key={post.id} post={post} />
-          ))}
         </VStack>
       </ScrollView>
 
