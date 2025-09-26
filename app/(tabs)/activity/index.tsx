@@ -6,7 +6,7 @@ import { useThemeColor } from "@/hooks/useThemeColor";
 import { router } from "expo-router";
 import React, { useState } from "react";
 import { Alert, ScrollView, TextInput, View } from "react-native";
-import { SafeAreaView } from "../../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 import withLogin from "@/components/withLogin";
 
 interface ActivityItemProps {

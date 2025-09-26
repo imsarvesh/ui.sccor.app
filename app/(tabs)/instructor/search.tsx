@@ -10,7 +10,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Image, ScrollView, View } from "react-native";
-import { SafeAreaView } from "../../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 interface Instructor {
   id: string;

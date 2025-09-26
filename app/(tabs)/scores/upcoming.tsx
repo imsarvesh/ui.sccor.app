@@ -8,7 +8,7 @@ import { Fonts } from "@/constants/Fonts";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import React from "react";
 import { ScrollView, StyleSheet } from "react-native";
-import { SafeAreaView } from "../../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 interface UpcomingMatchProps {
   title: string;

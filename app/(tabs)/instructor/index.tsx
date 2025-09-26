@@ -8,7 +8,7 @@ import { useRouter } from "expo-router";
 import React from "react";
 
 import { Image, ScrollView, TouchableOpacity, View } from "react-native";
-import { SafeAreaView } from "../../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 interface Instructor {
   id: string;

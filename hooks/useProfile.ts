@@ -33,34 +33,27 @@ export const useMyProfile = () => {
   };
 };
 
-export const useUnFollow = ({ onCompleted, ...options }) => {
+export const useUnFollow = () => {
   const [mutation, response] = useMutation(UNFOLLOW);
 
-  const unfollow = ({ id, followersCount, ...rest }: OtherProfile) =>
+  const unfollow = (id: string) =>
     mutation({
       variables: {
         otherUserId: id,
       },
-      onCompleted,
-      ...options,
     });
 
   return { unfollow, response };
 };
 
-export const useFollow = ({ onCompleted, ...options }) => {
+export const useFollow = () => {
   const [mutation, response] = useMutation(FOLLOW);
 
-  const follow = ({ id, followersCount, ...rest }: OtherProfile) => {
+  const follow = (id: string) => {
     return mutation({
       variables: {
         otherUserId: id,
       },
-      onCompleted,
-      onError: () => {
-        onCompleted({ id, followersCount, ...rest });
-      },
-      ...options,
     });
   };
 

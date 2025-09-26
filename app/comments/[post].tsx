@@ -5,7 +5,7 @@ import { KeyboardAvoidingView, Platform, StyleSheet } from "react-native";
 import { CommentInput, CommentList, Header } from "../../components";
 import { Comment } from "../../components/types";
 import { useThemeColor } from "../../hooks/useThemeColor";
-import { SafeAreaView } from "../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 interface CommentModalProps {
   visible: boolean;

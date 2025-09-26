@@ -5,7 +5,7 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import React from "react";
 import { Image, ScrollView, View } from "react-native";
-import { SafeAreaView } from "../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 export default function ExploreScreen() {
   const colorScheme = useColorScheme();

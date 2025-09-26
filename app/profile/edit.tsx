@@ -16,7 +16,7 @@ import {
   View,
 } from "react-native";
 import AvatarModal from "./avatar";
-import { SafeAreaView } from "../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 export default function EditProfileScreen() {
   const { me } = useStore();

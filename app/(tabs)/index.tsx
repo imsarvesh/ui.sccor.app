@@ -10,8 +10,14 @@ import { useThemeColor } from "@/hooks/useThemeColor";
 import { router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { useCallback, useRef, useState } from "react";
-import { RefreshControl, ScrollView, StyleSheet } from "react-native";
-import { SafeAreaView } from "../../components/ui";
+import {
+  RefreshControl,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+} from "react-native";
+import { SafeAreaView } from "@/components/ui";
 import Timeline from "@/components/Timeline";
 import { useStore } from "@/providers";
 
@@ -128,6 +134,10 @@ const HomePage = () => {
         <RecordButton onPress={() => router.push("/activity")} />
 
         <SuggestedUsers users={suggestedUsers} />
+
+        <TouchableOpacity onPress={() => router.push("/profile/1745603081698")}>
+          <Text style={{ color: textColor }}>Gmail User</Text>
+        </TouchableOpacity>
 
         {/* Posts */}
         <VStack style={styles.postsContainer}>

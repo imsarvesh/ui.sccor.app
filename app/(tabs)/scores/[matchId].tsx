@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import { Box, HStack, Pressable, Text, VStack } from "@/components/ui";
 import React, { useState } from "react";
 import { ActivityIndicator, ScrollView, TouchableOpacity } from "react-native";
-import { SafeAreaView } from "../../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 import Commentary from "./Commentary";
 import { router, useLocalSearchParams } from "expo-router";
 import { usePostById } from "@/service/hooks/usePost";

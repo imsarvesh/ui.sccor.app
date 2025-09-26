@@ -13,7 +13,7 @@ import { timeAgo } from "@/service/utils/timeAgo";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { ActivityIndicator, ScrollView, StyleSheet } from "react-native";
-import { SafeAreaView } from "../../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 export default function ScoresScreen() {
   const backgroundColor = useThemeColor({}, "backgroundPrimary");

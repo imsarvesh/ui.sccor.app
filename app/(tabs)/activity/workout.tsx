@@ -3,7 +3,7 @@ import { MonthlyCalendar, WorkoutPost } from "@/components/MonthlyCalendar";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import React, { useState } from "react";
 import { ScrollView, View } from "react-native";
-import { SafeAreaView } from "../../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 export default function CalendarScreen() {
   const backgroundColor = useThemeColor({}, "background");

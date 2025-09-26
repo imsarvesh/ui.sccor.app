@@ -1,11 +1,11 @@
 import { OtherProfile } from "@/graphql/types/graphql";
-import useProfile from "@/hooks/useProfile";
+import useProfile, { useFollow, useUnFollow } from "@/hooks/useProfile";
 import { useThemeColor } from "@/hooks/useThemeColor";
 import { useStore } from "@/providers/StoreProvider/useStore";
 import { dateFormat } from "@/service/utils/dateFormat";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { Redirect, router, useLocalSearchParams } from "expo-router";
-import React from "react";
+import React, { useState } from "react";
 import {
   ActivityIndicator,
   Image,
@@ -14,7 +14,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "../../components/ui";
+import { SafeAreaView } from "@/components/ui";
 
 export default function ProfileScreen() {
   const { username }: { username: string } = useLocalSearchParams();
@@ -86,7 +86,7 @@ export default function ProfileScreen() {
             Joined on {dateFormat(new Date(+profile.createdAt))}
           </Text>
           {isSelf ? (
-            <MyProfileActions profile={profile} />
+            <MyProfileActions />
           ) : (
             <OtherProfileActions profile={profile} />
           )}
@@ -94,7 +94,8 @@ export default function ProfileScreen() {
 
         {/* Stats */}
         <View className="flex-row flex-wrap gap-3 px-4 py-3">
-          <View
+          <TouchableOpacity
+            onPress={() => router.push(`/profile/${profile.username}/posts`)}
             className="flex-1 min-w-[111px] rounded-lg p-3 items-center"
             style={{ borderColor, borderWidth: 1 }}
           >
@@ -107,8 +108,11 @@ export default function ProfileScreen() {
             <Text className="text-sm" style={{ color: secondaryTextColor }}>
               Workouts
             </Text>
-          </View>
-          <View
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              router.push(`/profile/${profile.username}/followers`);
+            }}
             className="flex-1 min-w-[111px] rounded-lg p-3 items-center"
             style={{ borderColor, borderWidth: 1 }}
           >
@@ -121,8 +125,11 @@ export default function ProfileScreen() {
             <Text className="text-sm" style={{ color: secondaryTextColor }}>
               Followers
             </Text>
-          </View>
-          <View
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              router.push(`/profile/${profile.username}/following`);
+            }}
             className="flex-1 min-w-[111px] rounded-lg p-3 items-center"
             style={{ borderColor, borderWidth: 1 }}
           >
@@ -135,7 +142,7 @@ export default function ProfileScreen() {
             <Text className="text-sm" style={{ color: secondaryTextColor }}>
               Following
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
 
         {/* Featured */}
@@ -342,7 +349,7 @@ export default function ProfileScreen() {
   );
 }
 
-const MyProfileActions = ({ profile }: { profile: OtherProfile }) => {
+const MyProfileActions = () => {
   const backgroundSecondary = useThemeColor({}, "backgroundSecondary");
   const textColor = useThemeColor({}, "text");
 
@@ -368,24 +375,42 @@ const MyProfileActions = ({ profile }: { profile: OtherProfile }) => {
 };
 
 const OtherProfileActions = ({ profile }: { profile: OtherProfile }) => {
+  const [isFollowing, setIsFollowing] = useState(profile.following);
+  const [isLoading, setIsLoading] = useState(false);
   const backgroundSecondary = useThemeColor({}, "backgroundSecondary");
   const textColor = useThemeColor({}, "text");
+  const { unfollow } = useUnFollow();
+  const { follow } = useFollow();
 
   return (
     <View className="flex-row gap-3 w-full max-w-[480px]">
       <TouchableOpacity
         className="flex-1 h-10 rounded-full items-center justify-center px-4"
         style={{ backgroundColor: backgroundSecondary }}
-        onPress={() => console.log("follow", profile.username)}
+        onPress={() => {
+          if (isFollowing) {
+            setIsLoading(true);
+            unfollow(profile.id).finally(() => {
+              setIsLoading(false);
+              setIsFollowing(false);
+            });
+          } else {
+            setIsLoading(true);
+            follow(profile.id).finally(() => {
+              setIsLoading(false);
+              setIsFollowing(true);
+            });
+          }
+        }}
       >
         <Text className="text-sm font-bold" style={{ color: textColor }}>
-          Follow
+          {isLoading ? "Loading..." : isFollowing ? "Unfollow" : "Follow"}
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
         className="flex-1 h-10 rounded-full items-center justify-center px-4"
         style={{ backgroundColor: "#0d80f2" }}
-        onPress={() => console.log("message", profile.username)}
+        onPress={() => router.push(`/messages/${profile.id}`)}
       >
         <Text className="text-sm font-bold text-white">Message</Text>
       </TouchableOpacity>
