@@ -1,4 +1,4 @@
-import { Header, MessageItem } from "@/components";
+import { MessageItem } from "@/components";
 import SearchInput from "@/components/SearchInput";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
@@ -13,6 +13,7 @@ import { useStore } from "@/providers/StoreProvider/useStore";
 import withLogin from "@/components/withLogin";
 import { Conversation } from "@/graphql/types/graphql";
 import timeAgo from "@/service/utils/timeAgo";
+import Header from "./Header";
 
 function MessagesScreen() {
   const [searchQuery, setSearchQuery] = useState("");
