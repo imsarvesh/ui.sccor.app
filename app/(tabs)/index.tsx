@@ -3,7 +3,7 @@ import RecordButton from "@/components/RecordButton";
 import Sidebar from "@/components/Sidebar";
 import StoriesList from "@/components/StoriesList";
 import SuggestedUsers from "@/components/SuggestedUsers";
-import Timeline, { TimelineRef } from "@/components/Timeline";
+import MyTimeline, { TimelineRef } from "@/components/MyTimeline";
 import { VStack } from "@/components/ui";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { useThemeColor } from "@/hooks/useThemeColor";
@@ -12,8 +12,11 @@ import { StatusBar } from "expo-status-bar";
 import React, { useCallback, useRef, useState } from "react";
 import { RefreshControl, ScrollView, StyleSheet } from "react-native";
 import { SafeAreaView } from "../../components/ui";
+import Timeline from "@/components/Timeline";
+import { useStore } from "@/providers";
 
 const HomePage = () => {
+  const { isLoggedIn } = useStore();
   const colorScheme = useColorScheme();
   const timelineRef = useRef<TimelineRef>(null);
   const [refreshing, setRefreshing] = useState(false);
@@ -128,7 +131,11 @@ const HomePage = () => {
 
         {/* Posts */}
         <VStack style={styles.postsContainer}>
-          <Timeline ref={timelineRef} />
+          {isLoggedIn ? (
+            <MyTimeline ref={timelineRef} />
+          ) : (
+            <Timeline ref={timelineRef} />
+          )}
         </VStack>
       </ScrollView>
 

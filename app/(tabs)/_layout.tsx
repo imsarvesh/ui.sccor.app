@@ -3,7 +3,7 @@ import React from "react";
 import { Platform, View } from "react-native";
 
 import { HapticTab } from "@/components/HapticTab";
-import { IconSymbol } from "@/components/ui/IconSymbol";
+import { Ionicons } from "@expo/vector-icons";
 import GlassTabBarBackground from "@/components/ui/GlassTabBarBackground";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { useThemeColor } from "@/hooks/useThemeColor";
@@ -61,7 +61,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <Ionicons size={28} name="home" color={color} />
           ),
         }}
       />
@@ -70,7 +70,7 @@ export default function TabLayout() {
         options={{
           title: "Explore",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="globe" color={color} />
+            <Ionicons size={28} name="globe-outline" color={color} />
           ),
         }}
       />
@@ -80,7 +80,7 @@ export default function TabLayout() {
           title: "Record",
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="dot-circle-o" color={color} />
+            <Ionicons size={28} name="radio-button-on" color={color} />
           ),
         }}
       />
@@ -90,7 +90,7 @@ export default function TabLayout() {
         options={{
           title: "Instructors",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="person.2.fill" color={color} />
+            <Ionicons size={28} name="people" color={color} />
           ),
         }}
       />
@@ -100,7 +100,7 @@ export default function TabLayout() {
           title: "Scores",
           tabBarIcon: ({ color }) => (
             <View style={{ position: "relative" }}>
-              <IconSymbol size={28} name="chart.bar.fill" color={color} />
+              <Ionicons size={28} name="bar-chart" color={color} />
               <View
                 style={{
                   position: "absolute",

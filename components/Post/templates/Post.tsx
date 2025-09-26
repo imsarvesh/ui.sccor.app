@@ -6,13 +6,13 @@ import { useStore } from "@/providers/PostProvider";
 
 import { HStack, VStack } from "@/components/ui";
 import { useThemeColor } from "@/hooks/useThemeColor";
+import timeAgo from "@/service/utils/timeAgo";
 
 const Post = () => {
   const post = useStore();
   const user = post.profile;
 
   const textColor = useThemeColor({}, "text");
-  const iconColor = useThemeColor({}, "icon");
   const secondaryTextColor = useThemeColor(
     { light: "#9c4949", dark: "#a0a0a0" },
     "text"
@@ -22,8 +22,6 @@ const Post = () => {
     "background"
   );
   const shadowColor = useThemeColor({ light: "#000", dark: "#000" }, "text");
-
-  const profileImage = user?.image ? { uri: user?.image } : user?.defaultImage;
 
   const styles = StyleSheet.create({
     post: {
@@ -38,7 +36,6 @@ const Post = () => {
       elevation: 3,
     },
     postHeader: {
-      alignItems: "center",
       marginBottom: 12,
     },
     postUserImage: {
@@ -71,6 +68,7 @@ const Post = () => {
       marginBottom: 12,
     },
     postText: {
+      paddingTop: 12,
       fontSize: 16,
       fontFamily: Fonts.notoSans.regular,
       color: textColor,
@@ -94,8 +92,11 @@ const Post = () => {
         style={styles.postUserImage}
       />
       <VStack style={styles.postUserInfo}>
-        <Text style={styles.postUserName}>{"John Doe"}</Text>
-        <Text style={styles.postTimeAgo}>{"1d"}</Text>
+        <Text style={styles.postUserName}>{user.name}</Text>
+        <Text style={styles.postTimeAgo}>
+          {timeAgo(new Date(+post.createdAt))}
+        </Text>
+        <Text style={styles.postText}>{post.text}</Text>
       </VStack>
     </HStack>
   );

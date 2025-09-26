@@ -15,10 +15,25 @@ const PostItem = ({ post }: { post: Post }) => {
     "text"
   );
 
+  const cardBackground = useThemeColor(
+    { light: "#ffffff", dark: "#1a1a1a" },
+    "background"
+  );
+
+  const shadowColor = useThemeColor({ light: "#000", dark: "#000" }, "text");
+
   const styles = StyleSheet.create({
     post: {
       padding: 16,
       marginBottom: 16,
+      marginTop: 16,
+      backgroundColor: cardBackground,
+      borderRadius: 12,
+      shadowColor: shadowColor,
+      shadowOffset: { width: 2, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+      elevation: 1,
     },
     postHeader: {
       alignItems: "center",

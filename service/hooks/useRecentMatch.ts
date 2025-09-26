@@ -49,8 +49,6 @@ const useRecentMatch = (): {
         return acc;
       }, {});
 
-      //   console.log("matchesByStatus", JSON.stringify(matchesByStatus, null, 2));
-
       setRecentMatch(matchesByStatus);
     }
   }, [data]);
