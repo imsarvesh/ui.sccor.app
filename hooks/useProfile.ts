@@ -114,23 +114,28 @@ export const useProfileByUserId = (userId: string) => {
   };
 };
 
-export const useFollowersList = ({ username }) => {
+export const useFollowersList = ({
+  username,
+  nextToken = null,
+  limit = 10,
+}) => {
   const [profiles, setProfiles] = useState([]);
   const nextTokenRef = useRef<string>("");
-  const { loading: isLoading, data: followers } = useQuery(
-    GET_FOLLOWERS_BY_USERNAME,
-    {
-      fetchPolicy: "no-cache",
-      variables: { username },
-    }
-  );
+  const { loading: isLoading, data } = useQuery<{
+    followers: {
+      profiles: OtherProfile[];
+      nextToken: string;
+    };
+  }>(GET_FOLLOWERS_BY_USERNAME, {
+    fetchPolicy: "no-cache",
+    variables: { username, limit, nextToken },
+  });
+
+  const followers = data?.followers;
 
   useEffect(() => {
     if (followers) {
-      const { profiles, nextToken } = followers as {
-        profiles: OtherProfile[];
-        nextToken: string;
-      };
+      const { profiles, nextToken } = followers;
       nextTokenRef.current = nextToken;
       setProfiles(profiles || []);
     }
@@ -142,23 +147,28 @@ export const useFollowersList = ({ username }) => {
   };
 };
 
-export const useFollowingList = ({ username }) => {
+export const useFollowingList = ({
+  username,
+  nextToken = null,
+  limit = 10,
+}) => {
   const [profiles, setProfiles] = useState([]);
   const nextTokenRef = useRef<string>("");
-  const { loading: isLoading, data: following } = useQuery(
-    GET_FOLLOWING_BY_USERNAME,
-    {
-      fetchPolicy: "no-cache",
-      variables: { username },
-    }
-  );
+  const { loading: isLoading, data } = useQuery<{
+    following: {
+      profiles: OtherProfile[];
+      nextToken: string;
+    };
+  }>(GET_FOLLOWING_BY_USERNAME, {
+    fetchPolicy: "no-cache",
+    variables: { username, limit, nextToken },
+  });
+
+  const following = data?.following;
 
   useEffect(() => {
     if (following) {
-      const { profiles, nextToken } = following as {
-        profiles: OtherProfile[];
-        nextToken: string;
-      };
+      const { profiles, nextToken } = following;
       nextTokenRef.current = nextToken;
       setProfiles(profiles || []);
     }

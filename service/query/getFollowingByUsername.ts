@@ -1,12 +1,22 @@
-import gql from "graphql-tag";
+import { gql } from "@apollo/client";
 
 const getFollowingByUsername = gql`
-  query getFollowingByUsername($username: String!) {
-    following: getFollowing(username: $username, limit: 10) {
+  query getFollowingByUsername(
+    $username: String!
+    $nextToken: String
+    $limit: Int
+  ) {
+    following: getFollowing(
+      username: $username
+      limit: $limit
+      nextToken: $nextToken
+    ) {
       profiles {
         id
         name
         image
+        bio
+        username
       }
       nextToken
     }
