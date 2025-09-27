@@ -4,6 +4,7 @@ import { Image, Text } from "react-native";
 import { useStore } from "@/providers/PostProvider";
 
 import { HStack, VStack } from "@/components/ui";
+import LinkifiedText from "@/components/LinkifiedText";
 import timeAgo from "@/service/utils/timeAgo";
 
 const Post = () => {
@@ -26,9 +27,18 @@ const Post = () => {
         <Text className="text-sm font-normal text-typography-gray dark:text-typography-gray mt-0.5">
           {timeAgo(new Date(+post.createdAt))}
         </Text>
-        <Text className="pt-3 text-base font-normal text-typography-black dark:text-typography-white leading-6 mb-3">
-          {post.text}
-        </Text>
+        <LinkifiedText
+          text={post.text}
+          className="pt-3 text-base font-normal text-typography-black dark:text-typography-white leading-6 mb-3"
+          onHashtagPress={(hashtag) => {
+            // Handle hashtag press - you can navigate to hashtag page or search
+            console.log("Hashtag pressed:", hashtag);
+          }}
+          onUrlPress={(url) => {
+            // Handle URL press - opens in browser by default
+            console.log("URL pressed:", url);
+          }}
+        />
       </VStack>
     </HStack>
   );
